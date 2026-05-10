@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 21:04 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 21:19 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 21:04 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 21:19 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -150,9 +150,7 @@
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
 <div class="warning">⚠ TENNIS ATP : Multi-bookmaker scraping FR partiel: 2/6 sources (Unibet OK, oddsportal aggregate OK; Winamax/PMU bloques par safety restrictions, Bwin/ParionsSport non parsables).</div>
 <div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
-<div class="warning">⚠ NBA LAB : [INCREMENTAL_UPDATE_BLOCKED] incremental_update.py basketball-lab : exit 2 (Sofascore anti-bot 403, 5/5 jours bloques). Dataset master_lab.parquet reste a 2025-03-09 (gap 427j). NCAA/G League 2025-26 et WNBA 2025/2026 absents du dataset.</div>
-<div class="warning">⚠ NBA LAB : [SOFASCORE_BLOCKED_TODAY] API Sofascore scheduled-events 403 a 20h57 UTC+2. Liste des 4 matchs WNBA du jour heritee du run precedent (12h52).</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (34 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (35 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -182,6 +180,7 @@
 <div class="info-msg">ℹ️ NBA LAB : [NCAA_OFFSEASON] NCAA Division I (M) hors saison en mai (saison nov-mars). Aucun match a parier jusqu'a novembre 2026.</div>
 <div class="info-msg">ℹ️ NBA LAB : [GLEAGUE_OFFSEASON] NBA G League hors saison en mai (saison nov-mars). Aucun match a parier jusqu'a novembre 2026.</div>
 <div class="info-msg">ℹ️ NBA LAB : [WNBA_SEASON_OPENING] Saison WNBA 2026 demarree le 2026-05-08. Equipes ont 0-2 matchs joues. Min 10 requis pour V_NBA_FORM_LAB. Premiers paris possibles : juillet 2026 (apres ~10 matchs/equipe).</div>
+<div class="info-msg">ℹ️ NBA LAB : [DATASET_REFRESHED_OFFICIAL] master_lab.parquet bootstrappe via sources officielles (cdn.wnba.com + ESPN API) le 2026-05-10T21:19:13.591857 : 32905 matchs total. NCAA: 30646, G League: 2087, WNBA: 172. Couvre saisons 2024-25 + 2025-26 jusqu'au 09/05/2026. Sofascore evite, sources officielles non-anti-bot.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappé le 2026-05-10T12:35:55.753819 — 10458 matchs, 8624 avec features rolling. Backtest in-sample : WR 86.3% sur 1397 paris signal (ROI estim +72.51%). 6 ligues actives : EuroCup, Liga ACB, Lega A, BBL, LNB Pro A, Greek Basket League. VTB volume insuffisant pour test in-sample.</div>
@@ -933,21 +932,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (34.1h)</td>
+          <td>Vieillissant (34.3h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (34.1h)</td>
+          <td>Vieillissant (34.3h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (34.1h)</td>
+          <td>Vieillissant (34.3h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -961,14 +960,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.3h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (28.6h)</td>
+          <td>OK (28.8h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -996,7 +995,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (5.6h)</td>
+          <td>OK (5.8h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
