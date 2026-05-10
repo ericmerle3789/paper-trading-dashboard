@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 19:31 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 19:55 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:31 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:55 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -149,7 +149,8 @@
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
 <div class="warning">⚠ TENNIS ATP : Multi-bookmaker scraping FR partiel: 2/6 sources (Unibet OK, oddsportal aggregate OK; Winamax/PMU bloques par safety restrictions, Bwin/ParionsSport non parsables).</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (30 entrées) — cliquer pour voir</summary>
+<div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (31 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -166,9 +167,10 @@
 <div class="info-msg">ℹ️ VOLLEY : Aucun pari place aujourd'hui par integrite scientifique : les features rolling V_FORM (home_wr_10, away_wr_10) seraient calculees sur historique perime (rosters 2024-25 vs matchs 2026-05).</div>
 <div class="info-msg">ℹ️ VOLLEY : Action requise hors task quotidienne : re-bootstrapper le dataset volley via Chrome MCP intensif sur Flashscore (https://www.flashscore.com/volleyball/) OU source alternative, jusqu'a couvrir au minimum les 60 derniers jours par equipe active.</div>
 <div class="info-msg">ℹ️ VOLLEY : NB : run du 2026-05-09 deja blocke (end-of-season + 403). 2 runs consecutifs sans paris.</div>
-<div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes (Pologne Superliga)</div>
+<div class="info-msg">ℹ️ HANDBALL : [EVENING_RUN_CONFIRMED] Run scheduled J-1 19h50 confirme l'analyse matinale (09:52). Verification Chrome MCP via Flashscore le 10/05 a 19:52 — pas de nouveaux candidats J+1 detectes. 0 pari place, conforme aux skips legitimes du matin.</div>
+<div class="info-msg">ℹ️ HANDBALL : [DATASET_BOOTSTRAPPED_VALIDATION] Pattern V_FORM 7v7 in-sample : WR 83.4% sur 874 paris (ROI +66.82%) sur dataset bootstrappe 7567 matchs. Validation in-sample uniquement — out-of-sample (paper trading reel) commence ce mois-ci.</div>
+<div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes pour J+1 (Pologne Superliga Losers stage)</div>
 <div class="info-msg">ℹ️ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div>
-<div class="info-msg">ℹ️ HANDBALL : [DATASET_BOOTSTRAPPED] master_handball.parquet bootstrappé le 2026-05-10T12:48:02.604417 : 7567 matchs hommes (2024-2026), 5565 avec features rolling. Pattern V_FORM 7v7 in-sample : WR 83.4% sur 874 paris (ROI +66.82%). Hypothèse format 7v7 effectif réduit VALIDÉE.</div>
 <div class="info-msg">ℹ️ NHL LAB : Intersaison confirmee : KHL/SHL/Liiga/DEL/NL finissent en mars-avril, CHL en fevrier. Reprise prevue septembre 2026.</div>
 <div class="info-msg">ℹ️ NHL LAB : Sofascore API 403 anti-bot. Verification skip car run du matin (10h17) a deja confirme l'intersaison via les memes 6 ligues. Comportement coherent avec calendrier europeen.</div>
 <div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-10. master_lab.json toujours vide (0 paris depuis creation 2026-05-09).</div>
@@ -926,21 +928,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (32.5h)</td>
+          <td>Vieillissant (32.9h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (32.5h)</td>
+          <td>Vieillissant (32.9h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (32.5h)</td>
+          <td>Vieillissant (32.9h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -954,14 +956,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (1.5h)</td>
+          <td>OK (1.9h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (27.0h)</td>
+          <td>OK (27.4h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -983,13 +985,13 @@
           <td>⚪</td>
           <td>🤾 HANDBALL</td>
           <td>Pas encore exécuté</td>
-          <td class="small">2026-05-10T09:52:21+02:00</td>
+          <td class="small">2026-05-10T19:52:28+02:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (4.0h)</td>
+          <td>OK (4.4h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
