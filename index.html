@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 17:06 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 17:38 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 17:06 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 17:38 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -146,7 +146,7 @@
     </div>
     
 
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (18 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (19 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ NHL HOCKEY : [DATASET_OUTDATED] Dataset NHL en retard de 557 jours (dernier match : 2024-10-30, aujourd'hui : 2026-05-10). Sofascore anti-bot bloque l'incremental update (5/5 jours en 403). Aucun pari placé ce jour conformément au protocole d'intégrité scientifique : impossible de calculer winrates rolling 10 derniers matchs sur données obsolètes de 1.5 an. Saison 2024-25 (incl. playoffs Cup 2025) et saison 2025-26 entièrement manquantes.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
@@ -155,8 +155,9 @@
 <div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes (Pologne Superliga)</div>
 <div class="info-msg">ℹ️ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div>
 <div class="info-msg">ℹ️ HANDBALL : [DATASET_BOOTSTRAPPED] master_handball.parquet bootstrappé le 2026-05-10T12:48:02.604417 : 7567 matchs hommes (2024-2026), 5565 avec features rolling. Pattern V_FORM 7v7 in-sample : WR 83.4% sur 874 paris (ROI +66.82%). Hypothèse format 7v7 effectif réduit VALIDÉE.</div>
-<div class="info-msg">ℹ️ NHL LAB : Saison morte attendue : KHL/SHL/Liiga/DEL/NL/CHL toutes finies (Sept-Mars/Avril). Reprise prevue Sept 2026.</div>
-<div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-10. Comportement normal pendant l'intersaison.</div>
+<div class="info-msg">ℹ️ NHL LAB : Intersaison confirmee : KHL/SHL/Liiga/DEL/NL finissent en mars-avril, CHL en fevrier. Reprise prevue septembre 2026.</div>
+<div class="info-msg">ℹ️ NHL LAB : Sofascore API 403 anti-bot. Verification skip car run du matin (10h17) a deja confirme l'intersaison via les memes 6 ligues. Comportement coherent avec calendrier europeen.</div>
+<div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-10. master_lab.json toujours vide (0 paris depuis creation 2026-05-09).</div>
 <div class="info-msg">ℹ️ NBA LAB : BOOTSTRAP REQUIS : master_lab.parquet absent. Saison WNBA 2026 demarree le 2026-05-08, equipes ont 0-1 match. Sans historique WNBA 2025 (saison reguliere + playoffs), impossible de calculer rolling 10 jusqu'a juillet 2026 environ. Action recommandee : scraper basketball-reference WNBA 2025 (HTTP 200 OK) pour bootstrap initial.</div>
 <div class="info-msg">ℹ️ NBA LAB : Saison WNBA 2026 : 330 matchs prevus, 4 FINAL + 3 PENDING avant aujourd'hui. 4 matchs aujourd'hui.</div>
 <div class="info-msg">ℹ️ NBA LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappé le 2026-05-10T12:52:11.616210 : 30789 matchs, 23689 avec features. Pattern V_NBA_FORM_LAB in-sample : NCAA WR 88.0% (n=3482), G League WR 69.4% (n=147), WNBA WR 75.0% (n=8). Théorie format 5v5 confirmée sur ligues universitaires.</div>
@@ -705,21 +706,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (30.1h)</td>
+          <td>Vieillissant (30.6h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (30.1h)</td>
+          <td>Vieillissant (30.6h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (30.1h)</td>
+          <td>Vieillissant (30.6h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -733,14 +734,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (8.5h)</td>
+          <td>OK (9.1h)</td>
           <td class="small">2026-05-10T08:33:40.815912</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (24.6h)</td>
+          <td>OK (25.1h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -768,8 +769,8 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (8.8h)</td>
-          <td class="small">2026-05-10T08:17:29Z</td>
+          <td>OK (2.1h)</td>
+          <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
         <tr>
@@ -789,7 +790,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (3.8h)</td>
+          <td>OK (4.3h)</td>
           <td class="small">2026-05-10T13:18:07+00:00</td>
         </tr>
         </tbody>
