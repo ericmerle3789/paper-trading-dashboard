@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 15:44 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 16:04 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -70,12 +70,31 @@
   .book-unibet { background: #5d2880; }
   .book-parionssport { background: #d40000; }
   .book-bwin { background: #ffd700; color: #222; }
+  .howto-intro { background: #fff8c5; border-left: 4px solid #d9b300; padding: 12px 16px;
+                  border-radius: 6px; margin: 12px 0; font-size: 0.95em; }
+  .bet-howto { margin: 12px 0; padding: 14px; background: #f0f7ff;
+                border-radius: 8px; border-left: 4px solid #007aff; }
+  .bet-howto h4 { margin: 0 0 8px 0; color: #007aff; font-size: 1.05em; }
+  .bet-howto p { margin: 6px 0; }
+  .bet-instructions { font-size: 0.95em; color: #333; line-height: 1.6;
+                        background: white; padding: 8px 12px; border-radius: 6px;
+                        margin: 8px 0 !important; }
+  .bet-numbers { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .num-box { flex: 1; min-width: 90px; background: white; border-radius: 8px;
+              padding: 10px 12px; text-align: center; border: 1px solid #d8e3f0; }
+  .num-label { display: block; font-size: 0.78em; color: #57606a; margin-bottom: 4px;
+                 text-transform: uppercase; }
+  .num-value { display: block; font-size: 1.3em; font-weight: 700; color: #111; }
+  .num-profit .num-value { color: #1a7f37; }
+  .bet-reason { background: #fbe7ff; border-left: 4px solid #8250df; padding: 10px 14px;
+                  border-radius: 6px; margin: 10px 0; font-size: 0.92em; color: #444; }
+  .bet-tip { font-size: 0.85em; color: #57606a; font-style: italic; margin-top: 8px !important; }
 </style>
 </head>
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 15:44 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 16:04 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -260,113 +279,182 @@
 <h2>🎯 Paris ACTIFS en attente de résultat</h2>
 <div class="card">
   
-    <p class="small"><b>6 pari(s) actif(s)</b> en attente — touche le bookmaker pour ouvrir directement la page de recherche du match.</p>
+    <p class="howto-intro"><b>📖 Comment utiliser cette section</b><br>
+    Pour chaque pari ci-dessous : (1) lis "Ce que tu dois faire", (2) touche un bookmaker, (3) place ton pari réel chez lui, (4) reviens et c'est fait.<br>
+    <i>Ce sont des paris virtuels du système — c'est à toi de les placer en réel chez ton bookmaker FR.</i></p>
+    <p class="small"><b>6 pari(s) à placer</b></p>
     
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#1</span>
+            <span class="bet-num">Pari #1</span>
             <span class="bet-portfolio">⚽ FOOT EQUILIBRE</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> AH_HOME_+0.5 •
-            💱 <b>Cote :</b> 1.86 •
-            💰 <b>Mise :</b> 2.5€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Le Havre ne perd pas (gagne ou nul)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche "Handicap asiatique" pour le match Le Havre vs Marseille. Coche "Le Havre +0.5" (tu gagnes si Le Havre gagne OU si match nul).</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">2.50€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">1.86</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+2.15€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#2</span>
+            <span class="bet-num">Pari #2</span>
             <span class="bet-portfolio">⚽ FOOT EQUILIBRE</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> DRAW •
-            💱 <b>Cote :</b> 3.5 •
-            💰 <b>Mise :</b> 2.5€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Match nul (égalité)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match Le Havre vs Marseille. Coche "Match nul" (souvent appelé "N" ou "X" dans 1N2).</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">2.50€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">3.50</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+6.25€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#3</span>
+            <span class="bet-num">Pari #3</span>
             <span class="bet-portfolio">⚽ FOOT V_CADILLAC</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> DRAW_AND_UNDER •
-            💱 <b>Cote :</b> 7.35 •
-            💰 <b>Mise :</b> 3.5€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Match nul ET moins de 3 buts au total (PARI COMBINÉ)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match Le Havre vs Marseille. Tu vas créer un PARI COMBINÉ avec 2 sélections dans le MÊME ticket :<br>      ✓ Sélection 1 : "Match nul" (1N2 → N ou X)<br>      ✓ Sélection 2 : "Total buts moins de 2.5" (Under 2.5)<br>Sur Winamax/Betclic, ajoute les 2 sélections au panier puis choisis "Combiné". La cote affichée est multipliée automatiquement.</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">3.50€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">7.35</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+22.22€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#4</span>
+            <span class="bet-num">Pari #4</span>
             <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> DRAW •
-            💱 <b>Cote :</b> 3.5 •
-            💰 <b>Mise :</b> 1.67€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Match nul (égalité)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match Le Havre vs Marseille. Coche "Match nul" (souvent appelé "N" ou "X" dans 1N2).</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">1.67€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">3.50</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+4.17€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#5</span>
+            <span class="bet-num">Pari #5</span>
             <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> AH_HOME_+0.5 •
-            💱 <b>Cote :</b> 1.86 •
-            💰 <b>Mise :</b> 1.67€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Le Havre ne perd pas (gagne ou nul)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche "Handicap asiatique" pour le match Le Havre vs Marseille. Coche "Le Havre +0.5" (tu gagnes si Le Havre gagne OU si match nul).</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">1.67€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">1.86</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+1.44€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">#6</span>
+            <span class="bet-num">Pari #6</span>
             <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
-            <span class="bet-date">📅 2026-05-10</span>
+            <span class="bet-date">📅 2026-05-10 à 15:00 (F1)</span>
           </div>
+
           <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
-          <div class="bet-info">
-            🎯 <b>Pari sur :</b> DRAW_AND_UNDER •
-            💱 <b>Cote :</b> 7.35 •
-            💰 <b>Mise :</b> 1.67€
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Match nul ET moins de 3 buts au total (PARI COMBINÉ)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match Le Havre vs Marseille. Tu vas créer un PARI COMBINÉ avec 2 sélections dans le MÊME ticket :<br>      ✓ Sélection 1 : "Match nul" (1N2 → N ou X)<br>      ✓ Sélection 2 : "Total buts moins de 2.5" (Under 2.5)<br>Sur Winamax/Betclic, ajoute les 2 sélections au panier puis choisis "Combiné". La cote affichée est multipliée automatiquement.</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">1.67€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">7.35</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+10.60€</span></div>
+            </div>
           </div>
+
+          
+
           <div class="bet-action">
-            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
             <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
           </div>
         </div>
         
@@ -403,42 +491,42 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (28.7h)</td>
+          <td>OK (29.1h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (28.7h)</td>
+          <td>OK (29.1h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (28.7h)</td>
+          <td>OK (29.1h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏒 NHL HOCKEY</td>
-          <td>OK (3.6h)</td>
+          <td>OK (4.0h)</td>
           <td class="small">2026-05-10T12:06:01.366794</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (7.2h)</td>
+          <td>OK (7.5h)</td>
           <td class="small">2026-05-10T08:33:40.815912</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (23.2h)</td>
+          <td>OK (23.6h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -466,7 +554,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (7.5h)</td>
+          <td>OK (7.8h)</td>
           <td class="small">2026-05-10T08:17:29Z</td>
         </tr>
         
@@ -487,7 +575,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (2.4h)</td>
+          <td>OK (2.8h)</td>
           <td class="small">2026-05-10T13:18:07+00:00</td>
         </tr>
         </tbody>
