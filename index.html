@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 11:33 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 11:39 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -28,7 +28,11 @@
   .summary { background: linear-gradient(135deg, #007aff10, #007aff05); border-left: 4px solid #007aff;
               padding: 18px 22px; }
   .alert { background: #ffd7d7; border-left: 4px solid #cf222e; padding: 12px 16px;
-            border-radius: 6px; margin: 8px 0; }
+            border-radius: 6px; margin: 8px 0; font-size: 0.95em; }
+  .warning { background: #fff8c5; border-left: 4px solid #d9b300; padding: 10px 14px;
+              border-radius: 6px; margin: 6px 0; font-size: 0.92em; }
+  .info-msg { background: #e6f0ff; border-left: 4px solid #0969da; padding: 8px 12px;
+               border-radius: 6px; margin: 4px 0; font-size: 0.88em; color: #444; }
   .ok { background: #d4f4dd; border-left: 4px solid #1a7f37; padding: 12px 16px;
          border-radius: 6px; margin: 8px 0; }
   .small { font-size: 0.85em; color: #57606a; }
@@ -48,24 +52,46 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 11:33 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 11:39 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
     <div class="card summary">
       <h2 style="border:none; margin:0 0 12px 0; color:#111;">👋 En 1 minute</h2>
       <p><b>🟡 Total argent virtuel :</b> 9900.05€ (départ 9900.00€)<br>
-         <b>Évolution depuis début :</b> +0.05€ (+0.00%) — Le système est stable, démarrage en cours</p>
-      <p><b>📅 Aujourd'hui :</b> 0 pari(s) résolu(s) (0 gagné / 0 perdu) • 0 pari(s) placé(s) pour demain</p>
+         <b>Évolution depuis début :</b> +0.05€ (+0.0005%) — Le système est stable, démarrage en cours</p>
+      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>19</b></span></p>
+      <p><b>📅 Aujourd'hui :</b> 0 pari(s) résolu(s) (0 gagné / 0 perdu) • 0 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🎾 TENNIS ATP
          (+0.00%)<br>
          <b>📉 En difficulté :</b> ⚽ FOOT EQUILIBRE
          (+0.00%)</p>
+      <p><b>🚨 1 alerte(s) critique(s)</b> — voir section ci-dessous</p>
       <p><b>🎯 Que dois-tu faire ?</b> RIEN. Le système teste tout seul. Reviens dans quelques jours.</p>
     </div>
     
 
-<h2>🚨 Alertes</h2><div class="alert">⚠ EUROLEAGUE : {'level': 'WARNING', 'code': 'PARQUET_STALE', 'message': 'master_euroleague.parquet ne couvre pas la saison 2025-26 en cours (derniere saison 2024-25). Avant le match du 2026-05-13 PAM vs PAN, enrichir le parquet via l API EuroLeague sinon SKIP automatique (features rolling h_wr_10/a_wr_10 non calculables).'}</div><div class="alert">⚠ EUROLEAGUE : {'level': 'INFO', 'code': 'SEASON_END_PROXIMITY', 'message': 'Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.'}</div><div class="alert">⚠ EUROLEAGUE : {'level': 'INFO', 'code': 'RUN_TIME_EARLIER_THAN_EXPECTED', 'message': 'Task fired a 09:35 Paris au lieu de 21:10. J-1 mode applique sur target_date=2026-05-11 quand meme. Pas d impact car aucun match J+1.'}</div><div class="alert">⚠ HANDBALL : Sofascore API bloque (HTTP 403) — fallback Chrome MCP flashscore reussi</div><div class="alert">⚠ HANDBALL : 1 seul match candidat hommes dans ligues couvertes (Pologne Superliga)</div><div class="alert">⚠ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div><div class="alert">⚠ NHL LAB : Saison morte attendue : KHL/SHL/Liiga/DEL/NL/CHL toutes finies (Sept-Mars/Avril). Reprise prevue Sept 2026.</div><div class="alert">⚠ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-10. Comportement normal pendant l'intersaison.</div><div class="alert">⚠ NBA LAB : BOOTSTRAP REQUIS : master_lab.parquet absent. Saison WNBA 2026 demarree le 2026-05-08, equipes ont 0-1 match. Sans historique WNBA 2025 (saison reguliere + playoffs), impossible de calculer rolling 10 jusqu'a juillet 2026 environ. Action recommandee : scraper basketball-reference WNBA 2025 (HTTP 200 OK) pour bootstrap initial.</div><div class="alert">⚠ NBA LAB : Sofascore API HTTP 403 (User-Agent simple bloque). Fallback basketball-reference.com/wnba fonctionne. NCAA et G League hors saison (Nov-Mars).</div><div class="alert">⚠ NBA LAB : Saison WNBA 2026 : 330 matchs prevus, 4 FINAL + 3 PENDING avant aujourd'hui. 4 matchs aujourd'hui.</div><div class="alert">⚠ EUROLEAGUE LAB : {'level': 'BLOCKER', 'code': 'DATASET_MISSING', 'message': "master_lab.parquet absent dans /Users/ericmerle/Documents/EuroBasket/data/processed/. Bootstrap historique requis sur 7 ligues nationales (Sofascore API ou scraping Chrome MCP). Sans dataset, V_EURO_FORM_LAB ne peut pas calculer home_wr_10 / away_wr_10 / home_home_wr_10 et donc aucun bet conforme ne peut être placé. Aucun bet sera placé tant que ce bootstrap n'aura pas été exécuté manuellement (session dédiée recommandée — non faisable dans la fenêtre 21h40 quotidienne)."}</div><div class="alert">⚠ EUROLEAGUE LAB : {'level': 'INFO', 'code': 'SOFASCORE_403', 'message': 'api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).'}</div><div class="alert">⚠ EUROLEAGUE LAB : {'level': 'INFO', 'code': 'EUROCUP_GREEK_VTB_OFFSEASON', 'message': 'EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.'}</div>
+<h2>🚨 Alertes critiques (à corriger)</h2>
+<p class="small">Ces points <b>empêchent le système de fonctionner</b> sur certains sports — à investiguer.</p>
+<div class="alert">🚨 EUROLEAGUE LAB : [DATASET_MISSING] master_lab.parquet absent dans /Users/ericmerle/Documents/EuroBasket/data/processed/. Bootstrap historique requis sur 7 ligues nationales (Sofascore API ou scraping Chrome MCP). Sans dataset, V_EURO_FORM_LAB ne peut pas calculer home_wr_10 / away_wr_10 / home_home_wr_10 et donc aucun bet conforme ne peut être placé. Aucun bet sera placé tant que ce bootstrap n'aura pas été exécuté manuellement (session dédiée recommandée — non faisable dans la fenêtre 21h40 quotidienne).</div>
+<h2>⚠ Avertissements (à surveiller)</h2>
+<p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
+<div class="warning">⚠ EUROLEAGUE : [PARQUET_STALE] master_euroleague.parquet ne couvre pas la saison 2025-26 en cours (derniere saison 2024-25). Avant le match du 2026-05-13 PAM vs PAN, enrichir le parquet via l API EuroLeague sinon SKIP automatique (features rolling h_wr_10/a_wr_10 non calculables).</div>
+<div class="warning">⚠ HANDBALL : Sofascore API bloque (HTTP 403) — fallback Chrome MCP flashscore reussi</div>
+<div class="warning">⚠ NBA LAB : Sofascore API HTTP 403 (User-Agent simple bloque). Fallback basketball-reference.com/wnba fonctionne. NCAA et G League hors saison (Nov-Mars).</div>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (10 entrées) — cliquer pour voir</summary>
+<p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
+<div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE : [RUN_TIME_EARLIER_THAN_EXPECTED] Task fired a 09:35 Paris au lieu de 21:10. J-1 mode applique sur target_date=2026-05-11 quand meme. Pas d impact car aucun match J+1.</div>
+<div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes (Pologne Superliga)</div>
+<div class="info-msg">ℹ️ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div>
+<div class="info-msg">ℹ️ NHL LAB : Saison morte attendue : KHL/SHL/Liiga/DEL/NL/CHL toutes finies (Sept-Mars/Avril). Reprise prevue Sept 2026.</div>
+<div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-10. Comportement normal pendant l'intersaison.</div>
+<div class="info-msg">ℹ️ NBA LAB : BOOTSTRAP REQUIS : master_lab.parquet absent. Saison WNBA 2026 demarree le 2026-05-08, equipes ont 0-1 match. Sans historique WNBA 2025 (saison reguliere + playoffs), impossible de calculer rolling 10 jusqu'a juillet 2026 environ. Action recommandee : scraper basketball-reference WNBA 2025 (HTTP 200 OK) pour bootstrap initial.</div>
+<div class="info-msg">ℹ️ NBA LAB : Saison WNBA 2026 : 330 matchs prevus, 4 FINAL + 3 PENDING avant aujourd'hui. 4 matchs aujourd'hui.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.</div>
+</details>
 
 <h2>📈 Évolution du capital total (30 derniers jours)</h2>
 <div class="card">
@@ -209,7 +235,189 @@
     
 </div>
 
-<h2>🎯 Paris en cours (placés ce soir pour demain)</h2>
+<h2>🎯 Paris ACTIFS en attente de résultat</h2>
+<div class="card">
+  
+    <p class="small"><b>19 pari(s) actif(s)</b> en attente de résultat — placés ce soir ou les jours précédents.</p>
+    <table>
+      <thead><tr><th>Portefeuille</th><th>Date match</th><th>Match</th><th>Pari sur</th><th>Cote</th><th>Mise</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>🏒 NHL HOCKEY</td>
+          <td>2026-05-09</td>
+          <td>MIN vs COL</td>
+          <td><b>?</b></td>
+          <td>?</td>
+          <td>13.674999999999962€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>3.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT EQUILIBRE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>3.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT V_CADILLAC</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>2.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>3.5€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW</b></td>
+          <td>3.5</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>AH_HOME_+0.5</b></td>
+          <td>1.86</td>
+          <td>1.67€</td>
+        </tr>
+        
+        <tr>
+          <td>⚽ FOOT DIVERSIFIE</td>
+          <td>2026-05-10</td>
+          <td>Le Havre vs Marseille</td>
+          <td><b>DRAW_AND_UNDER</b></td>
+          <td>7.35</td>
+          <td>1.67€</td>
+        </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<h2>📅 Paris placés aujourd'hui</h2>
 <div class="card">
   <p>Aucun pari placé ce soir pour demain. Soit pas de signal, soit pas de matchs candidats.</p>
 </div>
@@ -239,42 +447,42 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (24.6h)</td>
+          <td>OK (24.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (24.6h)</td>
+          <td>OK (24.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (24.6h)</td>
+          <td>OK (24.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏒 NHL HOCKEY</td>
-          <td>OK (25.6h)</td>
+          <td>OK (25.7h)</td>
           <td class="small">2026-05-09T10:00:00.000000</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.1h)</td>
           <td class="small">2026-05-10T08:33:40.815912</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (19.1h)</td>
+          <td>OK (19.2h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -302,7 +510,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (3.3h)</td>
+          <td>OK (3.4h)</td>
           <td class="small">2026-05-10T08:17:29Z</td>
         </tr>
         
