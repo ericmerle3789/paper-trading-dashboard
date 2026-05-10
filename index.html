@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 19:14 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 19:30 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:14 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:30 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -154,7 +154,7 @@
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
 <div class="warning">⚠ TENNIS ATP : Multi-bookmaker scraping FR partiel: 2/6 sources (Unibet OK, oddsportal aggregate OK; Winamax/PMU bloques par safety restrictions, Bwin/ParionsSport non parsables).</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (26 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (30 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -167,6 +167,10 @@
 <div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [RUN_TIME_EARLIER_THAN_EXPECTED] Task fired a 09:35 Paris au lieu de 21:10. J-1 mode applique sur target_date=2026-05-11 quand meme. Pas d impact car aucun match J+1.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [PARQUET_ENRICHED] master_euroleague.parquet enrichi avec saison 2025-26 le 2026-05-10T12:48:02.603412 : 1749 nouveaux matchs ajoutés (total 3781 matchs, 3337 avec features).</div>
+<div class="info-msg">ℹ️ VOLLEY : CRITIQUE - Dataset master_volley.parquet gele au 2025-04-30 (gap 375 jours = saison 2025-26 entiere manquee). Sofascore API renvoie 403 sur 5/5 jours testes (anti-bot quota). incremental_update.py exit_code=2.</div>
+<div class="info-msg">ℹ️ VOLLEY : Aucun pari place aujourd'hui par integrite scientifique : les features rolling V_FORM (home_wr_10, away_wr_10) seraient calculees sur historique perime (rosters 2024-25 vs matchs 2026-05).</div>
+<div class="info-msg">ℹ️ VOLLEY : Action requise hors task quotidienne : re-bootstrapper le dataset volley via Chrome MCP intensif sur Flashscore (https://www.flashscore.com/volleyball/) OU source alternative, jusqu'a couvrir au minimum les 60 derniers jours par equipe active.</div>
+<div class="info-msg">ℹ️ VOLLEY : NB : run du 2026-05-09 deja blocke (end-of-season + 403). 2 runs consecutifs sans paris.</div>
 <div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes (Pologne Superliga)</div>
 <div class="info-msg">ℹ️ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div>
 <div class="info-msg">ℹ️ HANDBALL : [DATASET_BOOTSTRAPPED] master_handball.parquet bootstrappé le 2026-05-10T12:48:02.604417 : 7567 matchs hommes (2024-2026), 5565 avec features rolling. Pattern V_FORM 7v7 in-sample : WR 83.4% sur 874 paris (ROI +66.82%). Hypothèse format 7v7 effectif réduit VALIDÉE.</div>
@@ -927,21 +931,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (32.2h)</td>
+          <td>Vieillissant (32.5h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (32.2h)</td>
+          <td>Vieillissant (32.5h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (32.2h)</td>
+          <td>Vieillissant (32.5h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -955,14 +959,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (1.2h)</td>
+          <td>OK (1.5h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (26.7h)</td>
+          <td>OK (27.0h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -990,7 +994,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (3.7h)</td>
+          <td>OK (4.0h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
