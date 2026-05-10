@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 20:20 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 20:39 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 20:20 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 20:39 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -160,8 +160,8 @@
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
 <div class="info-msg">ℹ️ NHL HOCKEY : [DATASET_REFRESHED] master_nhl_v2.parquet bootstrappé via NHL.com API officielle le 2026-05-10T17:47:21.941064 : +2746 matchs (saisons 2024-25, 2025-26, playoffs 2026), 0 erreur. Dataset désormais à jour au 09/05/2026. Le prochain run NHL Core (17h00 demain) pourra calculer features rolling fraîches.</div>
 <div class="info-msg">ℹ️ TENNIS ATP : Dataset cutoff 2024-11-17 (1.5 ans en arriere). Stats H14 calculees sur historique disponible. Pas de fraicheur 2025-2026.</div>
-<div class="info-msg">ℹ️ NBA : [DATASET_STALE] Dataset master_nba.parquet arrete au 2024-06-17, gap de 692 jours (~2 saisons NBA). Sofascore retourne 403 (quota anti-bot) — incremental_update.py cap a 30j/run, fallback Chrome MCP non viable pour combler 2 saisons. Aucun pari place : features rolling sur 10 derniers matchs seraient calculees sur des donnees obsoletes (rosters 2024 vs 2025-26).</div>
 <div class="info-msg">ℹ️ NBA : [NBA_PLAYOFFS] 10 mai 2026 = pleine NBA Playoffs. Strategie V_NBA_FORM backtestee uniquement sur saison reguliere (2018-2024). Distribution differente en playoffs (echantillon, intensite, rotations courtes) — meme avec dataset a jour, application directe risquee sans validation prealable.</div>
+<div class="info-msg">ℹ️ NBA : [DATASET_REFRESHED] master_nba.parquet bootstrappé via basketball-reference.com le 2026-05-10T20:39:49.677132 : +2618 matchs (saisons 2024-25 + 2025-26 + playoffs 2026), 10119 matchs total, 9961 avec features rolling. Le prochain run NBA Core (20h15 demain) pourra calculer features rolling fraîches.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [RUN_TIME_EARLIER_THAN_EXPECTED] Task fired a 09:35 Paris au lieu de 21:10. J-1 mode applique sur target_date=2026-05-11 quand meme. Pas d impact car aucun match J+1.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [PARQUET_ENRICHED] master_euroleague.parquet enrichi avec saison 2025-26 le 2026-05-10T12:48:02.603412 : 1749 nouveaux matchs ajoutés (total 3781 matchs, 3337 avec features).</div>
@@ -930,21 +930,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (33.3h)</td>
+          <td>Vieillissant (33.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (33.3h)</td>
+          <td>Vieillissant (33.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (33.3h)</td>
+          <td>Vieillissant (33.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -958,14 +958,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (2.3h)</td>
+          <td>OK (2.6h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (27.8h)</td>
+          <td>OK (28.2h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -993,7 +993,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (4.8h)</td>
+          <td>OK (5.2h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
