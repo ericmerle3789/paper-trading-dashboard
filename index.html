@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 16:04 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 16:06 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -89,12 +89,25 @@
   .bet-reason { background: #fbe7ff; border-left: 4px solid #8250df; padding: 10px 14px;
                   border-radius: 6px; margin: 10px 0; font-size: 0.92em; color: #444; }
   .bet-tip { font-size: 0.85em; color: #57606a; font-style: italic; margin-top: 8px !important; }
+  .book-btn-primary { display: block; padding: 14px 20px; margin: 10px 0; border-radius: 10px;
+                        text-decoration: none; font-weight: 700; font-size: 1.15em; color: white;
+                        text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+                        transition: transform 0.1s, box-shadow 0.1s; }
+  .book-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 12px rgba(0,0,0,0.2); }
+  .book-btn-secondary { display: inline-block; padding: 5px 10px; margin: 3px 3px 3px 0;
+                          border-radius: 5px; text-decoration: none; font-weight: 500;
+                          font-size: 0.82em; color: white; opacity: 0.65; }
+  .book-btn-secondary:hover { opacity: 1; }
+  .book-secondary-row { margin-top: 10px; font-size: 0.85em; }
+  .book-fallback-label { display: block; color: #57606a; margin-bottom: 4px; font-size: 0.9em; }
+  .bet-reco-reason { font-size: 0.85em; color: #57606a; margin: 4px 0 8px 0 !important;
+                       font-style: italic; }
 </style>
 </head>
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 16:04 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 16:06 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -307,9 +320,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">recommandation par défaut (n°1 paris sportifs FR)</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 1.86, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
@@ -336,9 +350,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">recommandation par défaut (n°1 paris sportifs FR)</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 3.50, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
@@ -365,9 +380,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">cote dérivée de Bet365 (UK), prends une cote similaire chez Winamax</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 7.35, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
@@ -394,9 +410,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">recommandation par défaut (n°1 paris sportifs FR)</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 3.50, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
@@ -423,9 +440,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">recommandation par défaut (n°1 paris sportifs FR)</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 1.86, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
@@ -452,9 +470,10 @@
           
 
           <div class="bet-action">
-            <span class="bet-action-label">👉 Touche un bookmaker pour ouvrir le match directement :</span>
-            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
-            <p class="bet-tip">💡 Astuce : compare les cotes entre 2-3 bookmakers et prends la meilleure (ça change ton gain).</p>
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">cote dérivée de Bet365 (UK), prends une cote similaire chez Winamax</p>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 7.35, prends celle qu'il affiche au moment où tu paries. Les cotes bougent.</p>
           </div>
         </div>
         
