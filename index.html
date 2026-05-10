@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 21:20 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 21:47 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 21:20 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 21:47 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -152,7 +152,7 @@
 <div class="warning">⚠ EUROLEAGUE : [SOFASCORE_ANTIBOT] incremental_update.py euroleague-core a retourne exit=2 : 1/1 jour bloque par anti-bot Sofascore (403). Dataset reste a 2026-05-09 (1j retard). Fallback Chrome MCP non execute car aucun match J+1 a analyser ; impact operationnel nul ce jour-la, mais a relancer demain.</div>
 <div class="warning">⚠ EUROLEAGUE : [PARQUET_METRIC_MISMATCH] Run 09:35 indiquait 'parquet enrichi a 3781 matchs (3337 avec features)' mais master_euroleague.parquet contient toujours 2863 rows (date max 2026-05-09). Soit l'enrichissement a echoue silencieusement, soit la metrique reportee etait incorrecte. A investiguer si la saison reprend (octobre 2026).</div>
 <div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (35 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (37 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -183,9 +183,11 @@
 <div class="info-msg">ℹ️ NBA LAB : [GLEAGUE_OFFSEASON] NBA G League hors saison en mai (saison nov-mars). Aucun match a parier jusqu'a novembre 2026.</div>
 <div class="info-msg">ℹ️ NBA LAB : [WNBA_SEASON_OPENING] Saison WNBA 2026 demarree le 2026-05-08. Equipes ont 0-2 matchs joues. Min 10 requis pour V_NBA_FORM_LAB. Premiers paris possibles : juillet 2026 (apres ~10 matchs/equipe).</div>
 <div class="info-msg">ℹ️ NBA LAB : [DATASET_REFRESHED_OFFICIAL] master_lab.parquet bootstrappe via sources officielles (cdn.wnba.com + ESPN API) le 2026-05-10T21:19:13.591857 : 32905 matchs total. NCAA: 30646, G League: 2087, WNBA: 172. Couvre saisons 2024-25 + 2025-26 jusqu'au 09/05/2026. Sofascore evite, sources officielles non-anti-bot.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappé le 2026-05-10T12:35:55.753819 — 10458 matchs, 8624 avec features rolling. Backtest in-sample : WR 86.3% sur 1397 paris signal (ROI estim +72.51%). 6 ligues actives : EuroCup, Liga ACB, Lega A, BBL, LNB Pro A, Greek Basket League. VTB volume insuffisant pour test in-sample.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com retourne HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP utilisé avec succès (22 matchs identifiés).</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : [WINDOW_CLOSED] Task tourne à 21h40 heure France. Les ligues nationales européennes jouent typiquement 16h-20h le dimanche, donc tous les matchs sont déjà finis à 21h40. 0 pari pré-match possible.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_FLASHSCORE_MISMATCH] Divergence entre master_lab.parquet (11 matchs au 10/05) et Flashscore (22 matchs Lab au 10/05). Le bootstrap historique inclut des matchs France Pro A et Liga ACB (ASVEL-Strasbourg, Murcia-Girona, Barça Basket-Burgos, etc.) absents du calendrier Flashscore réel. Inversement, BBL et plusieurs Liga ACB du jour Flashscore ne sont pas dans le dataset. Hypothèse : dates bootstrap projetées synthétiquement. Calendrier live à toujours prendre depuis Flashscore (source de vérité).</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : [SHADOW_SIGNALS_DETECTED] Évaluation rétrospective (shadow) : 2 signaux V_EURO_FORM_LAB sur les matchs du dataset au 10/05. (1) LDLC ASVEL Lyon-Villeurbanne vs SIG Strasbourg (h_wr=1.00, a_wr=0.30, hh=1.00) → HOME signal → ASVEL 89-81 WIN. (2) UCAM Murcia vs Bàsquet Girona (h_wr=0.70, a_wr=0.30, hh=1.00) → HOME signal → Murcia 86-75 WIN. Shadow WR rétrospectif: 100% (2/2). Note: rétrospectif uniquement, aucun pari placé.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05 sur Flashscore. Saisons probablement terminées ou en pause inter-saisons.</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '1 pari V_CADILLAC_LAB place: Alverca vs Estoril Praia (P1) DRAW+UNDER 2.5 @ 7.80 Betclic', 'action': 'Suivre kickoff 21:30. Verification cotes triple (Betclic 7.80 / Unibet 6.90 / Bwin 6.045).'}</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Cote DRAW Bwin (3.10) sensiblement plus basse que Betclic (3.63) et Unibet (3.45). Margin Bwin probablement plus elevee. Best book = Betclic.', 'action': 'Continuer scraping multi-bookmaker pour identifier patterns de divergence.'}</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Kickoff fixtures.csv (20:30) divergent du kickoff Betclic/Unibet/Bwin (21:30). Heure FR canonique = 21:30 Liga Sagres.', 'action': 'Resolution differee au run du 11/05 19:00.'}</div>
@@ -934,21 +936,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (34.3h)</td>
+          <td>Vieillissant (34.8h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (34.3h)</td>
+          <td>Vieillissant (34.8h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (34.3h)</td>
+          <td>Vieillissant (34.8h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -962,14 +964,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (3.3h)</td>
+          <td>OK (3.7h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (28.8h)</td>
+          <td>OK (29.3h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -997,7 +999,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (5.8h)</td>
+          <td>OK (6.3h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
@@ -1012,7 +1014,7 @@
           <td>⚪</td>
           <td>🧪 EUROLEAGUE LAB</td>
           <td>Pas encore exécuté</td>
-          <td class="small">2026-05-10T10:36:24+02:00</td>
+          <td class="small">2026-05-10T21:40:00+02:00</td>
         </tr>
         
         <tr>
