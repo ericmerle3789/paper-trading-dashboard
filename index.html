@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 19:04 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 19:14 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:04 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 19:14 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -135,8 +135,8 @@
       <h2 style="border:none; margin:0 0 12px 0; color:#111;">👋 En 1 minute</h2>
       <p><b>🟡 Total argent virtuel :</b> 9900.05€ (départ 9900.00€)<br>
          <b>Évolution depuis début :</b> +0.05€ (+0.0005%) — Le système est stable, démarrage en cours</p>
-      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>8</b></span></p>
-      <p><b>📅 Aujourd'hui :</b> 0 pari(s) résolu(s) (0 gagné / 0 perdu) • 2 placé(s) ce soir pour demain</p>
+      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>9</b></span></p>
+      <p><b>📅 Aujourd'hui :</b> 0 pari(s) résolu(s) (0 gagné / 0 perdu) • 3 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🎾 TENNIS ATP
          (+0.00%)<br>
          <b>📉 En difficulté :</b> ⚽ FOOT EQUILIBRE
@@ -179,9 +179,9 @@
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappé le 2026-05-10T12:35:55.753819 — 10458 matchs, 8624 avec features rolling. Backtest in-sample : WR 86.3% sur 1397 paris signal (ROI estim +72.51%). 6 ligues actives : EuroCup, Liga ACB, Lega A, BBL, LNB Pro A, Greek Basket League. VTB volume insuffisant pour test in-sample.</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '6 candidats V_CADILLAC_LAB detectes (proxy odds, |Δp|≤0.10) — placement bloque par absence de cotes FR verifiees en mode autonome.', 'action': 'Review manuelle Winamax/Betclic/Unibet recommandee si interet.', 'matches': ['B1 Gent vs Anderlecht (kickoff 10/05/2026 12:30, combo Pinnacle≈6.97)', 'B1 Antwerp vs Charleroi (kickoff 10/05/2026 15:00, combo Pinnacle≈5.76)', 'D2 Preußen Münster vs Darmstadt (kickoff 10/05/2026 12:30, combo Pinnacle≈9.4)', 'N1 NAC Breda vs Heerenveen (kickoff 10/05/2026 15:45, combo Pinnacle≈10.12)', 'P1 Alverca vs Estoril (kickoff 10/05/2026 20:30, combo Pinnacle≈7.35)', 'SP1 Oviedo vs Getafe (kickoff 10/05/2026 17:30, combo Pinnacle≈4.97)']}</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Continentales (Sudamericana/Libertadores/AFC/CAF) non analysees: necessite session Sofascore via browser.', 'action': 'A integrer dans une future iteration de la task si Sofascore API publique trouvee.'}</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'WARN', 'msg': "Divergence config: state_lab.stop_loss_bankroll=225 vs task description=200. Sans impact aujourd'hui (bankroll 300).", 'action': 'Eric a clarifier le seuil canonique.'}</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '1 pari V_CADILLAC_LAB place: Alverca vs Estoril Praia (P1) DRAW+UNDER 2.5 @ 7.80 Betclic', 'action': 'Suivre kickoff 21:30. Verification cotes triple (Betclic 7.80 / Unibet 6.90 / Bwin 6.045).'}</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Cote DRAW Bwin (3.10) sensiblement plus basse que Betclic (3.63) et Unibet (3.45). Margin Bwin probablement plus elevee. Best book = Betclic.', 'action': 'Continuer scraping multi-bookmaker pour identifier patterns de divergence.'}</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Kickoff fixtures.csv (20:30) divergent du kickoff Betclic/Unibet/Bwin (21:30). Heure FR canonique = 21:30 Liga Sagres.', 'action': 'Resolution differee au run du 11/05 19:00.'}</div>
 </details>
 
 <h2>📈 Évolution du capital total (30 derniers jours)</h2>
@@ -319,7 +319,7 @@
           <td>300.00€</td>
           <td>+0.00€ (+0.00%)</td>
           <td>— (démarrage)</td>
-          <td class="small">0 en attente</td>
+          <td class="small">1 en attente</td>
         </tr>
         </tbody>
     </table>
@@ -332,7 +332,7 @@
     <p class="howto-intro"><b>📖 Comment utiliser cette section</b><br>
     Pour chaque pari ci-dessous : (1) lis "Ce que tu dois faire", (2) touche un bookmaker, (3) place ton pari réel chez lui, (4) reviens et c'est fait.<br>
     <i>Ce sont des paris virtuels du système — c'est à toi de les placer en réel chez ton bookmaker FR.</i></p>
-    <p class="small"><b>8 pari(s) à placer</b></p>
+    <p class="small"><b>9 pari(s) à placer</b></p>
     
         <div class="bet-card">
           <div class="bet-header">
@@ -691,6 +691,65 @@
         <div class="bet-card">
           <div class="bet-header">
             <span class="bet-num">Pari #7</span>
+            <span class="bet-portfolio">🧪 FOOT LAB</span>
+            <span class="bet-date">📅 2026-05-10 à 21:30 (P1)</span>
+          </div>
+
+          <div class="bet-match"><b>Alverca</b> vs <b>Estoril Praia</b></div>
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Match nul ET moins de 3 buts au total (PARI COMBINÉ)</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match Alverca vs Estoril Praia. Tu vas créer un PARI COMBINÉ avec 2 sélections dans le MÊME ticket :<br>      ✓ Sélection 1 : "Match nul" (1N2 → N ou X)<br>      ✓ Sélection 2 : "Total buts moins de 2.5" (Under 2.5)<br>Sur Winamax/Betclic, ajoute les 2 sélections au panier puis choisis "Combiné". La cote affichée est multipliée automatiquement.</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">1.20€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">7.80</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+8.16€</span></div>
+            </div>
+          </div>
+
+          
+            <div class="bet-proba">
+              <h4>🎯 Probabilité de gagner</h4>
+              <div class="proba-grid">
+                <div class="proba-box">
+                  <span class="proba-label">Selon notre stratégie</span>
+                  <span class="proba-value proba-strategy">20%</span>
+                  <span class="proba-source">estimation par analogie V_CADILLAC Core (pas encore backtesté)</span>
+                </div>
+                <div class="proba-box">
+                  <span class="proba-label">Selon le bookmaker</span>
+                  <span class="proba-value proba-market">13%</span>
+                  <span class="proba-source">cote 7.80 = 1/7.80</span>
+                </div>
+                <div class="proba-box proba-edge-box" style="border-color: #9a6700;">
+                  <span class="proba-label">Notre avantage</span>
+                  <span class="proba-value" style="color: #9a6700;">+7 points 📈</span>
+                  <span class="proba-source" style="color: #9a6700;"><b>🟡 Confiance modérée</b></span>
+                </div>
+              </div>
+              <p class="proba-explainer">
+                💡 Notre stratégie pense que ce pari a <b>20%</b> de chances de gagner.
+                Le bookmaker pense que c'est <b>13%</b>.
+                Si on a raison sur le long terme, on gagne en moyenne <b>7 points de plus</b> que le marché.
+              </p>
+            </div>
+            
+
+          
+
+          <div class="bet-action">
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Betclic</b></span>
+            <p class="bet-reco-reason">meilleure cote sur 3 bookmakers FR comparés</p>
+            <div class="bet-comparison"><b>Cotes comparées :</b><br>Betclic : 7.80 ⭐<br>Unibet : 6.90<br>Bwin : 6.04</div>
+            <a href="https://www.betclic.fr/recherche/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-primary book-betclic">👉 Place ton pari sur Betclic</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Betclic, essaie :</span> <a href="https://www.winamax.fr/paris-sportifs/recherche/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-secondary book-winamax">Winamax</a> <a href="https://paris-sportifs.pmu.fr/search/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Alverca%20Estoril%20Praia" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Betclic a une cote différente de 7.80 au moment du pari réel, prends celle qu'il affiche. Les cotes bougent en permanence.</p>
+          </div>
+        </div>
+        
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">Pari #8</span>
             <span class="bet-portfolio">🎾 TENNIS ATP</span>
             <span class="bet-date">📅 2026-05-11 (Rome (Internazionali BNL d'Italia))</span>
           </div>
@@ -749,7 +808,7 @@
         
         <div class="bet-card">
           <div class="bet-header">
-            <span class="bet-num">Pari #8</span>
+            <span class="bet-num">Pari #9</span>
             <span class="bet-portfolio">🎾 TENNIS ATP</span>
             <span class="bet-date">📅 2026-05-11 (Rome (Internazionali BNL d'Italia))</span>
           </div>
@@ -830,6 +889,14 @@
           <td>5.0€</td>
           <td class="small">Medvedev perd 37% de ses matchs en sets droits (fragile sur terre battue, surface non native). Llamas Ruiz gagne 60% sur clay (specialiste surface). Cote 2.70 reflete underdog, mais H14 a un ROI backtest de +13.89% sur clay.</td>
         </tr>
+        
+        <tr>
+          <td>🧪 FOOT LAB</td>
+          <td>Alverca vs Estoril Praia</td>
+          <td>7.8</td>
+          <td>1.2€</td>
+          <td class="small">Marché très équilibré : Alverca (cote 2.35) vs Estoril (2.70) ≈ pas de favori (Δp=0.055). Cote du nul élevée (3.50+) typique d'un match incertain où la signature DRAW + UNDER 2.5 est statistiquement favorable. Test extension de V_CADILLAC à la Liga Portugal.</td>
+        </tr>
         </tbody>
     </table>
     
@@ -860,21 +927,21 @@
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (32.1h)</td>
+          <td>Vieillissant (32.2h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (32.1h)</td>
+          <td>Vieillissant (32.2h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟡</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (32.1h)</td>
+          <td>Vieillissant (32.2h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -888,14 +955,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (1.0h)</td>
+          <td>OK (1.2h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (26.6h)</td>
+          <td>OK (26.7h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -923,7 +990,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (3.6h)</td>
+          <td>OK (3.7h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
@@ -942,10 +1009,10 @@
         </tr>
         
         <tr>
-          <td>🟢</td>
+          <td>⚪</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (5.8h)</td>
-          <td class="small">2026-05-10T13:18:07+00:00</td>
+          <td>Pas encore exécuté</td>
+          <td class="small">2026-05-10T19:00:00+02:00</td>
         </tr>
         </tbody>
     </table>
