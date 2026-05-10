@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 15:10 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 10/05/2026 15:44 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -47,12 +47,35 @@
   canvas { max-height: 280px; }
   .glossary dt { font-weight: 600; color: #007aff; margin-top: 8px; }
   .glossary dd { margin-left: 16px; color: #57606a; }
+  .bet-card { background: #fff; border-radius: 10px; padding: 14px 18px; margin-bottom: 12px;
+               box-shadow: 0 2px 4px rgba(0,0,0,0.06); border-left: 4px solid #007aff; }
+  .bet-header { display: flex; justify-content: space-between; align-items: center;
+                 margin-bottom: 8px; flex-wrap: wrap; gap: 8px; }
+  .bet-num { background: #007aff; color: white; padding: 2px 10px; border-radius: 12px;
+              font-size: 0.85em; font-weight: 600; }
+  .bet-portfolio { font-weight: 600; color: #444; }
+  .bet-date { font-size: 0.85em; color: #57606a; }
+  .bet-match { font-size: 1.1em; margin: 8px 0; }
+  .bet-info { font-size: 0.95em; color: #444; margin: 8px 0; padding: 8px;
+               background: #f7f8fa; border-radius: 6px; }
+  .bet-action { margin-top: 12px; }
+  .bet-action-label { display: block; margin-bottom: 8px; font-weight: 600; color: #1a7f37; }
+  .book-btn { display: inline-block; padding: 8px 14px; margin: 4px 4px 4px 0;
+               border-radius: 6px; text-decoration: none; font-weight: 600;
+               font-size: 0.9em; color: white; transition: opacity 0.2s; }
+  .book-btn:hover { opacity: 0.85; }
+  .book-winamax { background: #e30613; }
+  .book-betclic { background: #00509d; }
+  .book-pmu { background: #00853f; }
+  .book-unibet { background: #5d2880; }
+  .book-parionssport { background: #d40000; }
+  .book-bwin { background: #ffd700; color: #222; }
 </style>
 </head>
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 15:10 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 15:44 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -71,7 +94,7 @@
     </div>
     
 
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (14 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (17 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [RUN_TIME_EARLIER_THAN_EXPECTED] Task fired a 09:35 Paris au lieu de 21:10. J-1 mode applique sur target_date=2026-05-11 quand meme. Pas d impact car aucun match J+1.</div>
@@ -87,6 +110,9 @@
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com/api/v1/sport/basketball/scheduled-events/2026-05-10 renvoie HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP fonctionne. Calendrier du jour récupéré sans paris (22 matchs identifiés).</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05. Saisons probablement terminées ou en pause inter-saisons.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappé le 2026-05-10T12:35:55.753819 — 10458 matchs, 8624 avec features rolling. Backtest in-sample : WR 86.3% sur 1397 paris signal (ROI estim +72.51%). 6 ligues actives : EuroCup, Liga ACB, Lega A, BBL, LNB Pro A, Greek Basket League. VTB volume insuffisant pour test in-sample.</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '6 candidats V_CADILLAC_LAB detectes (proxy odds, |Δp|≤0.10) — placement bloque par absence de cotes FR verifiees en mode autonome.', 'action': 'Review manuelle Winamax/Betclic/Unibet recommandee si interet.', 'matches': ['B1 Gent vs Anderlecht (kickoff 10/05/2026 12:30, combo Pinnacle≈6.97)', 'B1 Antwerp vs Charleroi (kickoff 10/05/2026 15:00, combo Pinnacle≈5.76)', 'D2 Preußen Münster vs Darmstadt (kickoff 10/05/2026 12:30, combo Pinnacle≈9.4)', 'N1 NAC Breda vs Heerenveen (kickoff 10/05/2026 15:45, combo Pinnacle≈10.12)', 'P1 Alverca vs Estoril (kickoff 10/05/2026 20:30, combo Pinnacle≈7.35)', 'SP1 Oviedo vs Getafe (kickoff 10/05/2026 17:30, combo Pinnacle≈4.97)']}</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Continentales (Sudamericana/Libertadores/AFC/CAF) non analysees: necessite session Sofascore via browser.', 'action': 'A integrer dans une future iteration de la task si Sofascore API publique trouvee.'}</div>
+<div class="info-msg">ℹ️ FOOT LAB : {'level': 'WARN', 'msg': "Divergence config: state_lab.stop_loss_bankroll=225 vs task description=200. Sans impact aujourd'hui (bankroll 300).", 'action': 'Eric a clarifier le seuil canonique.'}</div>
 </details>
 
 <h2>📈 Évolution du capital total (30 derniers jours)</h2>
@@ -234,65 +260,116 @@
 <h2>🎯 Paris ACTIFS en attente de résultat</h2>
 <div class="card">
   
-    <p class="small"><b>6 pari(s) actif(s)</b> en attente de résultat — placés ce soir ou les jours précédents.</p>
-    <table>
-      <thead><tr><th>Portefeuille</th><th>Date match</th><th>Match</th><th>Pari sur</th><th>Cote</th><th>Mise</th></tr></thead>
-      <tbody>
-        <tr>
-          <td>⚽ FOOT EQUILIBRE</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>AH_HOME_+0.5</b></td>
-          <td>1.86</td>
-          <td>2.5€</td>
-        </tr>
+    <p class="small"><b>6 pari(s) actif(s)</b> en attente — touche le bookmaker pour ouvrir directement la page de recherche du match.</p>
+    
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#1</span>
+            <span class="bet-portfolio">⚽ FOOT EQUILIBRE</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> AH_HOME_+0.5 •
+            💱 <b>Cote :</b> 1.86 •
+            💰 <b>Mise :</b> 2.5€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
         
-        <tr>
-          <td>⚽ FOOT EQUILIBRE</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>DRAW</b></td>
-          <td>3.5</td>
-          <td>2.5€</td>
-        </tr>
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#2</span>
+            <span class="bet-portfolio">⚽ FOOT EQUILIBRE</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> DRAW •
+            💱 <b>Cote :</b> 3.5 •
+            💰 <b>Mise :</b> 2.5€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
         
-        <tr>
-          <td>⚽ FOOT V_CADILLAC</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>DRAW_AND_UNDER</b></td>
-          <td>7.35</td>
-          <td>3.5€</td>
-        </tr>
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#3</span>
+            <span class="bet-portfolio">⚽ FOOT V_CADILLAC</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> DRAW_AND_UNDER •
+            💱 <b>Cote :</b> 7.35 •
+            💰 <b>Mise :</b> 3.5€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
         
-        <tr>
-          <td>⚽ FOOT DIVERSIFIE</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>DRAW</b></td>
-          <td>3.5</td>
-          <td>1.67€</td>
-        </tr>
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#4</span>
+            <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> DRAW •
+            💱 <b>Cote :</b> 3.5 •
+            💰 <b>Mise :</b> 1.67€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
         
-        <tr>
-          <td>⚽ FOOT DIVERSIFIE</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>AH_HOME_+0.5</b></td>
-          <td>1.86</td>
-          <td>1.67€</td>
-        </tr>
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#5</span>
+            <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> AH_HOME_+0.5 •
+            💱 <b>Cote :</b> 1.86 •
+            💰 <b>Mise :</b> 1.67€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
         
-        <tr>
-          <td>⚽ FOOT DIVERSIFIE</td>
-          <td>2026-05-10</td>
-          <td>Le Havre vs Marseille</td>
-          <td><b>DRAW_AND_UNDER</b></td>
-          <td>7.35</td>
-          <td>1.67€</td>
-        </tr>
-        </tbody>
-    </table>
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">#6</span>
+            <span class="bet-portfolio">⚽ FOOT DIVERSIFIE</span>
+            <span class="bet-date">📅 2026-05-10</span>
+          </div>
+          <div class="bet-match"><b>Le Havre</b> vs <b>Marseille</b></div>
+          <div class="bet-info">
+            🎯 <b>Pari sur :</b> DRAW_AND_UNDER •
+            💱 <b>Cote :</b> 7.35 •
+            💰 <b>Mise :</b> 1.67€
+          </div>
+          <div class="bet-action">
+            <span class="bet-action-label">👉 Place ce pari sur :</span>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Le%20Havre%20Marseille" target="_blank" class="book-btn book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Le%20Havre%20Marseille" target="_blank" class="book-btn book-bwin">Bwin</a>
+          </div>
+        </div>
+        
     
 </div>
 
@@ -326,42 +403,42 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (28.2h)</td>
+          <td>OK (28.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (28.2h)</td>
+          <td>OK (28.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (28.2h)</td>
+          <td>OK (28.7h)</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏒 NHL HOCKEY</td>
-          <td>OK (3.1h)</td>
+          <td>OK (3.6h)</td>
           <td class="small">2026-05-10T12:06:01.366794</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (6.6h)</td>
+          <td>OK (7.2h)</td>
           <td class="small">2026-05-10T08:33:40.815912</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>🏀 NBA</td>
-          <td>OK (22.7h)</td>
+          <td>OK (23.2h)</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -389,7 +466,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (6.9h)</td>
+          <td>OK (7.5h)</td>
           <td class="small">2026-05-10T08:17:29Z</td>
         </tr>
         
@@ -408,10 +485,10 @@
         </tr>
         
         <tr>
-          <td>⚪</td>
+          <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>Pas encore exécuté</td>
-          <td class="small">—</td>
+          <td>OK (2.4h)</td>
+          <td class="small">2026-05-10T13:18:07+00:00</td>
         </tr>
         </tbody>
     </table>
