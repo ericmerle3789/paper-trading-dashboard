@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 11/05/2026 18:07 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 11/05/2026 19:46 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 18:07 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 19:46 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -135,8 +135,8 @@
       <h2 style="border:none; margin:0 0 12px 0; color:#111;">👋 En 1 minute</h2>
       <p><b>🟡 Total argent virtuel :</b> 9898.21€ (départ 9900.00€)<br>
          <b>Évolution depuis début :</b> -1.79€ (-0.0181%) — Le système est stable, démarrage en cours</p>
-      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>2</b></span></p>
-      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 3 placé(s) ce soir pour demain</p>
+      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>4</b></span></p>
+      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 4 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🧪 FOOT LAB
          (+2.72%)<br>
          <b>📉 En difficulté :</b> 🎾 TENNIS ATP
@@ -148,11 +148,9 @@
 
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
-<div class="warning">⚠ EUROLEAGUE : [SOFASCORE_ANTIBOT] incremental_update.py euroleague-core a retourne exit=2 : 1/1 jour bloque par anti-bot Sofascore (403). Dataset reste a 2026-05-09 (1j retard). Fallback Chrome MCP non execute car aucun match J+1 a analyser ; impact operationnel nul ce jour-la, mais a relancer demain.</div>
-<div class="warning">⚠ EUROLEAGUE : [PARQUET_METRIC_MISMATCH] Run 09:35 indiquait 'parquet enrichi a 3781 matchs (3337 avec features)' mais master_euroleague.parquet contient toujours 2863 rows (date max 2026-05-09). Soit l'enrichissement a echoue silencieusement, soit la metrique reportee etait incorrecte. A investiguer si la saison reprend (octobre 2026).</div>
 <div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
-<div class="warning">⚠ Task NBA : pas de run depuis 50h</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (36 entrées) — cliquer pour voir</summary>
+<div class="warning">⚠ Task NBA : pas de run depuis 51h</div>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (24 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -160,11 +158,7 @@
 <div class="info-msg">ℹ️ FOOT V_CADILLAC : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
-<div class="info-msg">ℹ️ NBA : [NBA_PLAYOFFS] 10 mai 2026 = pleine NBA Playoffs. Strategie V_NBA_FORM backtestee uniquement sur saison reguliere (2018-2024). Distribution differente en playoffs (echantillon, intensite, rotations courtes) — meme avec dataset a jour, application directe risquee sans validation prealable.</div>
-<div class="info-msg">ℹ️ NBA : [DATASET_REFRESHED] master_nba.parquet bootstrappé via basketball-reference.com le 2026-05-10T20:39:49.677132 : +2618 matchs (saisons 2024-25 + 2025-26 + playoffs 2026), 10119 matchs total, 9961 avec features rolling. Le prochain run NBA Core (20h15 demain) pourra calculer features rolling fraîches.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE : [DUPLICATE_RUN_TODAY] Run anterieur detecte ce matin a 09:35 (anomalie : task planifiee a 21:10). Daily_run.json reecrit avec resultats 21:10 officiels. A noter pour debugging cron.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE : Doublons detectes dans le parquet : Kauno Zalgiris vs Fenerbahce Beko (90-94) et Panathinaikos vs Valencia (86-89) sont presents identiquement aux dates 2026-05-08 ET 2026-05-09. Bug scraper a corriger pour l'integrite du dataset (impact mineur car features rolling sont robustes).</div>
+<div class="info-msg">ℹ️ EUROLEAGUE : {'info': 'EuroLeague saison terminée (Final Four passé). API officielle: 0 match J+1. Sofascore: uniquement matchs Cyber/eSports filtrés.'}</div>
 <div class="info-msg">ℹ️ VOLLEY : CRITIQUE - Dataset master_volley.parquet gele au 2025-04-30 (gap 375 jours = saison 2025-26 entiere manquee). Sofascore API renvoie 403 sur 5/5 jours testes (anti-bot quota). incremental_update.py exit_code=2.</div>
 <div class="info-msg">ℹ️ VOLLEY : Aucun pari place aujourd'hui par integrite scientifique : les features rolling V_FORM (home_wr_10, away_wr_10) seraient calculees sur historique perime (rosters 2024-25 vs matchs 2026-05).</div>
 <div class="info-msg">ℹ️ VOLLEY : Action requise hors task quotidienne : re-bootstrapper le dataset volley via Chrome MCP intensif sur Flashscore (https://www.flashscore.com/volleyball/) OU source alternative, jusqu'a couvrir au minimum les 60 derniers jours par equipe active.</div>
@@ -177,16 +171,8 @@
 <div class="info-msg">ℹ️ NHL LAB : Sofascore API 403 anti-bot (desktop + mobile UA testes). Skip fallback Chrome MCP car (a) intersaison structurelle deja documentee, (b) Core NHL run de 17h00 confirme NHL playoffs actifs mais aucune ligue europeenne disponible.</div>
 <div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-11. master_lab.json toujours vide (0 paris depuis creation 2026-05-09, soit 2 jours d'intersaison consecutifs).</div>
 <div class="info-msg">ℹ️ NHL LAB : Lab en hibernation mecanique jusqu'a septembre 2026. Prochaine fenetre de collecte : reprise CHL fin aout 2026, puis KHL/SHL/Liiga/DEL/NL courant septembre 2026.</div>
-<div class="info-msg">ℹ️ NBA LAB : [DATASET_BOOTSTRAPPED] master_lab.parquet bootstrappe le 2026-05-10T12:52:11 : 30706 matchs (2024-09-01 -> 2025-03-09), 23689 avec features. Pattern V_NBA_FORM_LAB in-sample : NCAA WR 88.0% (n=3482), G League WR 69.4% (n=147), WNBA WR 75.0% (n=8). Theorie format 5v5 confirmee in-sample sur ligues universitaires americaines.</div>
-<div class="info-msg">ℹ️ NBA LAB : [NCAA_OFFSEASON] NCAA Division I (M) hors saison en mai (saison nov-mars). Aucun match a parier jusqu'a novembre 2026.</div>
-<div class="info-msg">ℹ️ NBA LAB : [GLEAGUE_OFFSEASON] NBA G League hors saison en mai (saison nov-mars). Aucun match a parier jusqu'a novembre 2026.</div>
-<div class="info-msg">ℹ️ NBA LAB : [WNBA_SEASON_OPENING] Saison WNBA 2026 demarree le 2026-05-08. Equipes ont 0-2 matchs joues. Min 10 requis pour V_NBA_FORM_LAB. Premiers paris possibles : juillet 2026 (apres ~10 matchs/equipe).</div>
-<div class="info-msg">ℹ️ NBA LAB : [DATASET_REFRESHED_OFFICIAL] master_lab.parquet bootstrappe via sources officielles (cdn.wnba.com + ESPN API) le 2026-05-10T21:19:13.591857 : 32905 matchs total. NCAA: 30646, G League: 2087, WNBA: 172. Couvre saisons 2024-25 + 2025-26 jusqu'au 09/05/2026. Sofascore evite, sources officielles non-anti-bot.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : api.sofascore.com retourne HTTP 403 sur curl direct. Fallback Flashscore via Chrome MCP utilisé avec succès (22 matchs identifiés).</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [WINDOW_CLOSED] Task tourne à 21h40 heure France. Les ligues nationales européennes jouent typiquement 16h-20h le dimanche, donc tous les matchs sont déjà finis à 21h40. 0 pari pré-match possible.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [DATASET_FLASHSCORE_MISMATCH] Divergence entre master_lab.parquet (11 matchs au 10/05) et Flashscore (22 matchs Lab au 10/05). Le bootstrap historique inclut des matchs France Pro A et Liga ACB (ASVEL-Strasbourg, Murcia-Girona, Barça Basket-Burgos, etc.) absents du calendrier Flashscore réel. Inversement, BBL et plusieurs Liga ACB du jour Flashscore ne sont pas dans le dataset. Hypothèse : dates bootstrap projetées synthétiquement. Calendrier live à toujours prendre depuis Flashscore (source de vérité).</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [SHADOW_SIGNALS_DETECTED] Évaluation rétrospective (shadow) : 2 signaux V_EURO_FORM_LAB sur les matchs du dataset au 10/05. (1) LDLC ASVEL Lyon-Villeurbanne vs SIG Strasbourg (h_wr=1.00, a_wr=0.30, hh=1.00) → HOME signal → ASVEL 89-81 WIN. (2) UCAM Murcia vs Bàsquet Girona (h_wr=0.70, a_wr=0.30, hh=1.00) → HOME signal → Murcia 86-75 WIN. Shadow WR rétrospectif: 100% (2/2). Note: rétrospectif uniquement, aucun pari placé.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : [EUROCUP_GREEK_VTB_OFFSEASON] EuroCup, Greek Basket League et VTB United League absents du calendrier 10/05 sur Flashscore. Saisons probablement terminées ou en pause inter-saisons.</div>
+<div class="info-msg">ℹ️ NBA LAB : {'info': 'NCAA/G League hors saison (mai = été WNBA seulement)'}</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : Scraping multi-bookmaker FR non exécuté en mode auto — cote Sofascore=2.50 indicative. Eric à valider cote FR avant placement.</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '1 pari V_CADILLAC_LAB place: Alverca vs Estoril Praia (P1) DRAW+UNDER 2.5 @ 7.80 Betclic', 'action': 'Suivre kickoff 21:30. Verification cotes triple (Betclic 7.80 / Unibet 6.90 / Bwin 6.045).'}</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Cote DRAW Bwin (3.10) sensiblement plus basse que Betclic (3.63) et Unibet (3.45). Margin Bwin probablement plus elevee. Best book = Betclic.', 'action': 'Continuer scraping multi-bookmaker pour identifier patterns de divergence.'}</div>
 <div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Kickoff fixtures.csv (20:30) divergent du kickoff Betclic/Unibet/Bwin (21:30). Heure FR canonique = 21:30 Liga Sagres.', 'action': 'Resolution differee au run du 11/05 19:00.'}</div>
@@ -318,7 +304,7 @@
           <td>200.00€</td>
           <td>+0.00€ (+0.00%)</td>
           <td>— (démarrage)</td>
-          <td class="small">0 en attente</td>
+          <td class="small">2 en attente</td>
         </tr>
         
         <tr>
@@ -340,7 +326,7 @@
     <p class="howto-intro"><b>📖 Comment utiliser cette section</b><br>
     Pour chaque pari ci-dessous : (1) lis "Ce que tu dois faire", (2) touche un bookmaker, (3) place ton pari réel chez lui, (4) reviens et c'est fait.<br>
     <i>Ce sont des paris virtuels du système — c'est à toi de les placer en réel chez ton bookmaker FR.</i></p>
-    <p class="small"><b>2 pari(s) à placer</b></p>
+    <p class="small"><b>4 pari(s) à placer</b></p>
     
         <div class="bet-card">
           <div class="bet-header">
@@ -460,6 +446,124 @@
           </div>
         </div>
         
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">Pari #3</span>
+            <span class="bet-portfolio">🧪 EUROLEAGUE LAB</span>
+            <span class="bet-date">📅 2026-05-12 (ACB)</span>
+          </div>
+
+          <div class="bet-match"><b>Bàsquet Girona</b> vs <b>BAXI Manresa</b></div>
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> BAXI Manresa gagne le match</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match. Coche "BAXI Manresa gagne" (souvent appelé "2" ou "Vainqueur : BAXI Manresa").</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">10.00€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">2.50</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+15.00€</span></div>
+            </div>
+          </div>
+
+          
+            <div class="bet-proba">
+              <h4>🎯 Probabilité de gagner</h4>
+              <div class="proba-grid">
+                <div class="proba-box">
+                  <span class="proba-label">Selon notre stratégie</span>
+                  <span class="proba-value proba-strategy">86%</span>
+                  <span class="proba-source">2 saisons 7 ligues européennes in-sample (1397 paris)</span>
+                </div>
+                <div class="proba-box">
+                  <span class="proba-label">Selon le bookmaker</span>
+                  <span class="proba-value proba-market">40%</span>
+                  <span class="proba-source">cote 2.50 = 1/2.50</span>
+                </div>
+                <div class="proba-box proba-edge-box" style="border-color: #1a7f37;">
+                  <span class="proba-label">Notre avantage</span>
+                  <span class="proba-value" style="color: #1a7f37;">+46 points 📈</span>
+                  <span class="proba-source" style="color: #1a7f37;"><b>🟢 Forte confiance</b></span>
+                </div>
+              </div>
+              <p class="proba-explainer">
+                💡 Notre stratégie pense que ce pari a <b>86%</b> de chances de gagner.
+                Le bookmaker pense que c'est <b>40%</b>.
+                Si on a raison sur le long terme, on gagne en moyenne <b>46 points de plus</b> que le marché.
+              </p>
+            </div>
+            
+
+          
+
+          <div class="bet-action">
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">⚠ recommandation par défaut (multi-scraping pas encore disponible pour ce pari)</p>
+            
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 2.50 au moment du pari réel, prends celle qu'il affiche. Les cotes bougent en permanence.</p>
+          </div>
+        </div>
+        
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">Pari #4</span>
+            <span class="bet-portfolio">🧪 EUROLEAGUE LAB</span>
+            <span class="bet-date">📅 2026-05-12 (ACB)</span>
+          </div>
+
+          <div class="bet-match"><b>Bàsquet Girona</b> vs <b>BAXI Manresa</b></div>
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> BAXI Manresa gagne le match</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match. Coche "BAXI Manresa gagne" (souvent appelé "2" ou "Vainqueur : BAXI Manresa").</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">4.78€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">2.50</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+7.17€</span></div>
+            </div>
+          </div>
+
+          
+            <div class="bet-proba">
+              <h4>🎯 Probabilité de gagner</h4>
+              <div class="proba-grid">
+                <div class="proba-box">
+                  <span class="proba-label">Selon notre stratégie</span>
+                  <span class="proba-value proba-strategy">86%</span>
+                  <span class="proba-source">2 saisons 7 ligues européennes in-sample (1397 paris)</span>
+                </div>
+                <div class="proba-box">
+                  <span class="proba-label">Selon le bookmaker</span>
+                  <span class="proba-value proba-market">40%</span>
+                  <span class="proba-source">cote 2.50 = 1/2.50</span>
+                </div>
+                <div class="proba-box proba-edge-box" style="border-color: #1a7f37;">
+                  <span class="proba-label">Notre avantage</span>
+                  <span class="proba-value" style="color: #1a7f37;">+46 points 📈</span>
+                  <span class="proba-source" style="color: #1a7f37;"><b>🟢 Forte confiance</b></span>
+                </div>
+              </div>
+              <p class="proba-explainer">
+                💡 Notre stratégie pense que ce pari a <b>86%</b> de chances de gagner.
+                Le bookmaker pense que c'est <b>40%</b>.
+                Si on a raison sur le long terme, on gagne en moyenne <b>46 points de plus</b> que le marché.
+              </p>
+            </div>
+            
+
+          
+
+          <div class="bet-action">
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Winamax</b></span>
+            <p class="bet-reco-reason">⚠ recommandation par défaut (multi-scraping pas encore disponible pour ce pari)</p>
+            
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-primary book-winamax">👉 Place ton pari sur Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Winamax, essaie :</span> <a href="https://www.betclic.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/B%C3%A0squet%20Girona%20BAXI%20Manresa" target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Winamax a une cote différente de 2.50 au moment du pari réel, prends celle qu'il affiche. Les cotes bougent en permanence.</p>
+          </div>
+        </div>
+        
     
 </div>
 
@@ -483,6 +587,14 @@
           <td>1.19</td>
           <td>5.0€</td>
           <td class="small">Darderi perd 50% en sets droits (fragile). Zverev gagne 85% sur terre battue (specialiste absolu). Marche pricing 1.19 ne capture pas la robustesse du double pattern H14.</td>
+        </tr>
+        
+        <tr>
+          <td>🧪 EUROLEAGUE LAB</td>
+          <td>BAXI Manresa @ Bàsquet Girona</td>
+          <td>2.5</td>
+          <td>?€</td>
+          <td class="small">Manresa en série (80% wr10), Girona en slump (20%). Edge +75% sur cote 2.50. Eric à vérifier cote Winamax/Betclic/Unibet.</td>
         </tr>
         
         <tr>
@@ -541,21 +653,21 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (1.4h)</td>
+          <td>OK (3.0h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (1.4h)</td>
+          <td>OK (3.0h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (1.4h)</td>
+          <td>OK (3.0h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
@@ -569,14 +681,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (0.0h)</td>
+          <td>OK (1.7h)</td>
           <td class="small">2026-05-11T18:06:56.765967</td>
         </tr>
         
         <tr>
           <td>🔴</td>
           <td>🏀 NBA</td>
-          <td>PAS DE RUN depuis 50h</td>
+          <td>PAS DE RUN depuis 51h</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -625,7 +737,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (1.4h)</td>
+          <td>OK (3.0h)</td>
           <td class="small">2026-05-11T16:44:08.828393</td>
         </tr>
         </tbody>
