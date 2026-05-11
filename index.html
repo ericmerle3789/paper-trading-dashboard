@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 11/05/2026 18:04 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 11/05/2026 18:07 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 18:04 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 18:07 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -135,8 +135,8 @@
       <h2 style="border:none; margin:0 0 12px 0; color:#111;">👋 En 1 minute</h2>
       <p><b>🟡 Total argent virtuel :</b> 9898.21€ (départ 9900.00€)<br>
          <b>Évolution depuis début :</b> -1.79€ (-0.0181%) — Le système est stable, démarrage en cours</p>
-      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>0</b></span></p>
-      <p><b>📅 Aujourd'hui :</b> 0 pari(s) résolu(s) (0 gagné / 0 perdu) • 3 placé(s) ce soir pour demain</p>
+      <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>2</b></span></p>
+      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 3 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🧪 FOOT LAB
          (+2.72%)<br>
          <b>📉 En difficulté :</b> 🎾 TENNIS ATP
@@ -148,12 +148,11 @@
 
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
-<div class="warning">⚠ TENNIS ATP : Multi-bookmaker scraping FR partiel: 2/6 sources (Unibet OK, oddsportal aggregate OK; Winamax/PMU bloques par safety restrictions, Bwin/ParionsSport non parsables).</div>
 <div class="warning">⚠ EUROLEAGUE : [SOFASCORE_ANTIBOT] incremental_update.py euroleague-core a retourne exit=2 : 1/1 jour bloque par anti-bot Sofascore (403). Dataset reste a 2026-05-09 (1j retard). Fallback Chrome MCP non execute car aucun match J+1 a analyser ; impact operationnel nul ce jour-la, mais a relancer demain.</div>
 <div class="warning">⚠ EUROLEAGUE : [PARQUET_METRIC_MISMATCH] Run 09:35 indiquait 'parquet enrichi a 3781 matchs (3337 avec features)' mais master_euroleague.parquet contient toujours 2863 rows (date max 2026-05-09). Soit l'enrichissement a echoue silencieusement, soit la metrique reportee etait incorrecte. A investiguer si la saison reprend (octobre 2026).</div>
 <div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
 <div class="warning">⚠ Task NBA : pas de run depuis 50h</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (37 entrées) — cliquer pour voir</summary>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (36 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
@@ -161,7 +160,6 @@
 <div class="info-msg">ℹ️ FOOT V_CADILLAC : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
-<div class="info-msg">ℹ️ TENNIS ATP : [DATASET_REFRESHED] master_atp_advanced.parquet bootstrappe via tennis-data.co.uk le 2026-05-10T20:51:20.289571 : +3660 matchs ATP (saisons 2025 + 2026). 30073 matchs total. Features rolling 20 matchs recalculees par joueur.</div>
 <div class="info-msg">ℹ️ NBA : [NBA_PLAYOFFS] 10 mai 2026 = pleine NBA Playoffs. Strategie V_NBA_FORM backtestee uniquement sur saison reguliere (2018-2024). Distribution differente en playoffs (echantillon, intensite, rotations courtes) — meme avec dataset a jour, application directe risquee sans validation prealable.</div>
 <div class="info-msg">ℹ️ NBA : [DATASET_REFRESHED] master_nba.parquet bootstrappé via basketball-reference.com le 2026-05-10T20:39:49.677132 : +2618 matchs (saisons 2024-25 + 2025-26 + playoffs 2026), 10119 matchs total, 9961 avec features rolling. Le prochain run NBA Core (20h15 demain) pourra calculer features rolling fraîches.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : [SEASON_END_PROXIMITY] Saison E2025 quasi-terminee : 1 seul match restant (Playoffs Round 45 le 2026-05-13). Final Four EuroLeague 2026 attendu mi-fin mai. Pause naturelle juin-septembre apres.</div>
@@ -248,7 +246,7 @@
           <td>990.05€</td>
           <td>-9.95€ (-1.00%)</td>
           <td>33.3% (3 paris)</td>
-          <td class="small">0 en attente</td>
+          <td class="small">2 en attente</td>
         </tr>
         
         <tr>
@@ -338,7 +336,131 @@
 
 <h2>🎯 Paris ACTIFS en attente de résultat</h2>
 <div class="card">
-  <p>Aucun pari actif en attente. Le système est prêt à placer des paris ce soir pour demain.</p>
+  
+    <p class="howto-intro"><b>📖 Comment utiliser cette section</b><br>
+    Pour chaque pari ci-dessous : (1) lis "Ce que tu dois faire", (2) touche un bookmaker, (3) place ton pari réel chez lui, (4) reviens et c'est fait.<br>
+    <i>Ce sont des paris virtuels du système — c'est à toi de les placer en réel chez ton bookmaker FR.</i></p>
+    <p class="small"><b>2 pari(s) à placer</b></p>
+    
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">Pari #1</span>
+            <span class="bet-portfolio">🎾 TENNIS ATP</span>
+            <span class="bet-date">📅 2026-05-12 (Rome (Internazionali BNL d'Italia))</span>
+          </div>
+
+          <div class="bet-match">Rublev A. vs Basilashvili N.</div>
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Rublev A. gagne le match</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match. Coche "Vainqueur du match : Rublev A.".</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">4.95€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">1.20</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+0.99€</span></div>
+            </div>
+          </div>
+
+          
+            <div class="bet-proba">
+              <h4>🎯 Probabilité de gagner</h4>
+              <div class="proba-grid">
+                <div class="proba-box">
+                  <span class="proba-label">Selon notre stratégie</span>
+                  <span class="proba-value proba-strategy">61%</span>
+                  <span class="proba-source">10 ans ATP, 10963 paris — stats pures double-conditionnement</span>
+                </div>
+                <div class="proba-box">
+                  <span class="proba-label">Selon le bookmaker</span>
+                  <span class="proba-value proba-market">83%</span>
+                  <span class="proba-source">cote 1.20 = 1/1.20</span>
+                </div>
+                <div class="proba-box proba-edge-box" style="border-color: #cf222e;">
+                  <span class="proba-label">Notre avantage</span>
+                  <span class="proba-value" style="color: #cf222e;">-22 points 📉</span>
+                  <span class="proba-source" style="color: #cf222e;"><b>🔴 Edge négatif</b></span>
+                </div>
+              </div>
+              <p class="proba-explainer">
+                💡 Notre stratégie pense que ce pari a <b>61%</b> de chances de gagner.
+                Le bookmaker pense que c'est <b>83%</b>.
+                Si on a raison sur le long terme, on gagne en moyenne <b>-22 points de plus</b> que le marché.
+              </p>
+            </div>
+            
+
+          <div class="bet-reason">📊 <b>Pourquoi ce pari :</b> Basilashvili perd 60% de ses matchs en sets droits (joueur fragile). Rublev gagne 65% sur terre battue (specialiste surface). Marche price Rublev a 1.20 (mega favori) mais H14 confirme l'edge structurel sur ce double pattern.</div>
+
+          <div class="bet-action">
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Betclic_or_Winamax</b></span>
+            <p class="bet-reco-reason">meilleure cote sur 4 bookmakers FR comparés</p>
+            <div class="bet-comparison"><b>Cotes comparées :</b><br>Oddsportal_max : 1.29<br>Betclic : 1.20<br>Winamax : 1.20<br>Unibet : 1.19</div>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-primary book-betclic_or_winamax">👉 Place ton pari sur Betclic_or_Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Betclic_or_Winamax, essaie :</span> <a href="https://www.winamax.fr/paris-sportifs/recherche/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Rublev%20A.%20Basilashvili%20N." target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Betclic_or_Winamax a une cote différente de 1.20 au moment du pari réel, prends celle qu'il affiche. Les cotes bougent en permanence.</p>
+          </div>
+        </div>
+        
+        <div class="bet-card">
+          <div class="bet-header">
+            <span class="bet-num">Pari #2</span>
+            <span class="bet-portfolio">🎾 TENNIS ATP</span>
+            <span class="bet-date">📅 2026-05-12 (Rome (Internazionali BNL d'Italia))</span>
+          </div>
+
+          <div class="bet-match">Zverev A. vs Darderi L.</div>
+
+          <div class="bet-howto">
+            <h4>🎫 Ce que tu dois faire chez le bookmaker</h4>
+            <p><b>Type de pari :</b> Zverev A. gagne le match</p>
+            <p class="bet-instructions">Sur le bookmaker, cherche le match. Coche "Vainqueur du match : Zverev A.".</p>
+            <div class="bet-numbers">
+              <div class="num-box"><span class="num-label">💰 Mise</span><span class="num-value">4.95€</span></div>
+              <div class="num-box"><span class="num-label">💱 Cote</span><span class="num-value">1.19</span></div>
+              <div class="num-box num-profit"><span class="num-label">🎉 Si tu gagnes</span><span class="num-value">+0.94€</span></div>
+            </div>
+          </div>
+
+          
+            <div class="bet-proba">
+              <h4>🎯 Probabilité de gagner</h4>
+              <div class="proba-grid">
+                <div class="proba-box">
+                  <span class="proba-label">Selon notre stratégie</span>
+                  <span class="proba-value proba-strategy">61%</span>
+                  <span class="proba-source">10 ans ATP, 10963 paris — stats pures double-conditionnement</span>
+                </div>
+                <div class="proba-box">
+                  <span class="proba-label">Selon le bookmaker</span>
+                  <span class="proba-value proba-market">84%</span>
+                  <span class="proba-source">cote 1.19 = 1/1.19</span>
+                </div>
+                <div class="proba-box proba-edge-box" style="border-color: #cf222e;">
+                  <span class="proba-label">Notre avantage</span>
+                  <span class="proba-value" style="color: #cf222e;">-23 points 📉</span>
+                  <span class="proba-source" style="color: #cf222e;"><b>🔴 Edge négatif</b></span>
+                </div>
+              </div>
+              <p class="proba-explainer">
+                💡 Notre stratégie pense que ce pari a <b>61%</b> de chances de gagner.
+                Le bookmaker pense que c'est <b>84%</b>.
+                Si on a raison sur le long terme, on gagne en moyenne <b>-23 points de plus</b> que le marché.
+              </p>
+            </div>
+            
+
+          <div class="bet-reason">📊 <b>Pourquoi ce pari :</b> Darderi perd 50% en sets droits (fragile sous pression). Zverev gagne 85% sur terre battue (specialiste absolu). Marche price Zverev a 1.19 (megafavori); H14 confirme la robustesse du pattern.</div>
+
+          <div class="bet-action">
+            <span class="bet-action-label">🎯 Bookmaker recommandé : <b>Betclic_or_Winamax</b></span>
+            <p class="bet-reco-reason">meilleure cote sur 5 bookmakers FR comparés</p>
+            <div class="bet-comparison"><b>Cotes comparées :</b><br>Oddsportal_max : 1.21<br>Betclic : 1.19<br>Winamax : 1.19<br>Unibet : 1.18<br>Bwin : 1.16</div>
+            <a href="https://www.winamax.fr/paris-sportifs/recherche/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-primary book-betclic_or_winamax">👉 Place ton pari sur Betclic_or_Winamax</a><div class="book-secondary-row"><span class="book-fallback-label">Si pas dispo chez Betclic_or_Winamax, essaie :</span> <a href="https://www.winamax.fr/paris-sportifs/recherche/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-winamax">Winamax</a> <a href="https://www.betclic.fr/recherche/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-betclic">Betclic</a> <a href="https://paris-sportifs.pmu.fr/search/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-pmu">PMU</a> <a href="https://www.unibet.fr/recherche/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-unibet">Unibet</a> <a href="https://www.enligne.parionssport.fdj.fr/recherche/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-parionssport">ParionsSport</a> <a href="https://sports.bwin.fr/fr/sports/search/Zverev%20A.%20Darderi%20L." target="_blank" class="book-btn-secondary book-bwin">Bwin</a></div>
+            <p class="bet-tip">💡 Si Betclic_or_Winamax a une cote différente de 1.19 au moment du pari réel, prends celle qu'il affiche. Les cotes bougent en permanence.</p>
+          </div>
+        </div>
+        
+    
 </div>
 
 <h2>📅 Paris placés aujourd'hui</h2>
@@ -349,18 +471,18 @@
       <tbody>
         <tr>
           <td>🎾 TENNIS ATP</td>
-          <td>Nakashima B. vs Basilashvili N.</td>
-          <td>1.46</td>
+          <td>Rublev A. vs Basilashvili N.</td>
+          <td>1.2</td>
           <td>5.0€</td>
-          <td class="small">Basilashvili perd 60% de ses matchs en sets droits (fragile). Nakashima gagne 56% sur terre battue. Le marche price Nakashima a 1.46 mais le double pattern H14 suggere un edge structurel.</td>
+          <td class="small">Basilashvili perd 60% de ses matchs en sets droits (fragile structurel). Rublev gagne 65% sur terre battue. Le marche price Rublev mega-favori a 1.20 mais H14 confirme l'edge sur ce double pattern.</td>
         </tr>
         
         <tr>
           <td>🎾 TENNIS ATP</td>
-          <td>Llamas Ruiz P. vs Medvedev D.</td>
-          <td>2.7</td>
+          <td>Darderi L. vs Zverev A.</td>
+          <td>1.19</td>
           <td>5.0€</td>
-          <td class="small">Medvedev perd 37% de ses matchs en sets droits (fragile sur terre battue, surface non native). Llamas Ruiz gagne 60% sur clay (specialiste surface). Cote 2.70 reflete underdog, mais H14 a un ROI backtest de +13.89% sur clay.</td>
+          <td class="small">Darderi perd 50% en sets droits (fragile). Zverev gagne 85% sur terre battue (specialiste absolu). Marche pricing 1.19 ne capture pas la robustesse du double pattern H14.</td>
         </tr>
         
         <tr>
@@ -377,7 +499,26 @@
 
 <h2>✅ Résultats des matchs du jour</h2>
 <div class="card">
-  <p>Aucun résultat aujourd'hui (les matchs sont peut-être à venir, ou attente résolution).</p>
+  
+    <table>
+      <thead><tr><th>Portefeuille</th><th>Match</th><th>Score</th><th>Résultat</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>🎾 TENNIS ATP</td>
+          <td>Nakashima B. vs Basilashvili N.</td>
+          <td>4-6 6-2 7-6(3) Basilashvili</td>
+          <td>❌ -5.00€</td>
+        </tr>
+        
+        <tr>
+          <td>🎾 TENNIS ATP</td>
+          <td>Llamas Ruiz P. vs Medvedev D.</td>
+          <td>Walkover (Llamas Ruiz abandon)</td>
+          <td>❌ -5.00€</td>
+        </tr>
+        </tbody>
+    </table>
+    
 </div>
 
 <h2>🔬 Détails approfondis</h2>
@@ -400,21 +541,21 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (1.3h)</td>
+          <td>OK (1.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (1.3h)</td>
+          <td>OK (1.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (1.3h)</td>
+          <td>OK (1.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
@@ -428,8 +569,8 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (1.3h)</td>
-          <td class="small">2026-05-11T16:44:08.828393</td>
+          <td>OK (0.0h)</td>
+          <td class="small">2026-05-11T18:06:56.765967</td>
         </tr>
         
         <tr>
@@ -484,7 +625,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (1.3h)</td>
+          <td>OK (1.4h)</td>
           <td class="small">2026-05-11T16:44:08.828393</td>
         </tr>
         </tbody>
