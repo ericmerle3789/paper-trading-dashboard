@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 11/05/2026 20:09 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 11/05/2026 20:39 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 20:09 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 20:39 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -136,7 +136,7 @@
       <p><b>🟡 Total argent virtuel :</b> 9898.21€ (départ 9900.00€)<br>
          <b>Évolution depuis début :</b> -1.79€ (-0.0181%) — Le système est stable, démarrage en cours</p>
       <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>4</b></span></p>
-      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 3 placé(s) ce soir pour demain</p>
+      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 2 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🧪 FOOT LAB
          (+2.72%)<br>
          <b>📉 En difficulté :</b> 🎾 TENNIS ATP
@@ -166,7 +166,6 @@
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : Note: Red Star-Rodez 12/05 = Ligue 2 Relegation Play-offs (pas Ligue 1) — hors scope.</div>
 <div class="info-msg">ℹ️ FOOT DIVERSIFIE : Daily-task foot-paper-trading-daily 18:30 n'a pas tourne aujourd'hui : daily_run.json precedent du 10/05 18:30. evening-scan-multi assure le scan J+1.</div>
 <div class="info-msg">ℹ️ NHL HOCKEY : Dataset NHL ne contient pas les playoffs (dernier match 16 avril 2026). Pour scan playoffs, considerer incremental update playoff-aware ou marquer playoff matches comme out-of-distribution.</div>
-<div class="info-msg">ℹ️ EUROLEAGUE : {'info': 'EuroLeague saison terminée (Final Four passé). API officielle: 0 match J+1. Sofascore: uniquement matchs Cyber/eSports filtrés.'}</div>
 <div class="info-msg">ℹ️ VOLLEY : Sofascore API retourne 0 evenements volley pour 2026-05-12 : saisons europeennes terminees (Pologne fin mars, Italie SuperLega fin avril, France Ligue A fin avril). VNL 2026 demarre debut juin.</div>
 <div class="info-msg">ℹ️ VOLLEY : Dataset master_volley.parquet update partiel : +167 matchs (cap 30j sur gap 376j). Encore 346j a rattraper sur prochains runs. Features rolling sur dataset partiel non utilisees ce soir car 0 candidats.</div>
 <div class="info-msg">ℹ️ VOLLEY : 0 bookmaker scrape (0 candidats), pas de news_check/correlation_check requis.</div>
@@ -178,8 +177,9 @@
 <div class="info-msg">ℹ️ NHL LAB : Re-scan a 20h00 par evening-scan-multi : confirme intersaison J+1 (Sofascore retourne 0 evenements ice-hockey toutes ligues 2026-05-12).</div>
 <div class="info-msg">ℹ️ NHL LAB : KHL/SHL/Liiga/DEL/NL finissent en mars-avril, CHL en fevrier. Reprise prevue septembre 2026.</div>
 <div class="info-msg">ℹ️ NHL LAB : Lab en hibernation mecanique jusqu'a septembre 2026. master_lab.json reste vide (0/50 paris pour validation extension format 6v6).</div>
-<div class="info-msg">ℹ️ NBA LAB : {'info': 'NCAA/G League hors saison (mai = été WNBA seulement)'}</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : Scraping multi-bookmaker FR non exécuté en mode auto — cote Sofascore=2.50 indicative. Eric à valider cote FR avant placement.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : Lega A Italy: page vide oddsportal</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : LNB France: pas de match J+1 (prochain 16 mai)</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : EuroCup non-scanné: probable hors saison</div>
 <div class="info-msg">ℹ️ FOOT LAB : Sofascore API 403 anti-bot (desktop + mobile UA testes). Continentales (Sudamericana/Libertadores/AFC/CAF) NON analysees via API.</div>
 <div class="info-msg">ℹ️ FOOT LAB : 0 matchs Eredivisie/Liga Portugal/Bundesliga 2 J+1 (intersaison ou play-offs).</div>
 <div class="info-msg">ℹ️ FOOT LAB : Daily-task foot-lab-paper-trading-daily 19h00 n'a pas tourne aujourd'hui. evening-scan-multi assure le scan J+1.</div>
@@ -596,14 +596,6 @@
           <td>5.0€</td>
           <td class="small">Darderi perd 50% en sets droits (fragile). Zverev gagne 85% sur terre battue (specialiste absolu). Marche pricing 1.19 ne capture pas la robustesse du double pattern H14.</td>
         </tr>
-        
-        <tr>
-          <td>🧪 EUROLEAGUE LAB</td>
-          <td>BAXI Manresa @ Bàsquet Girona</td>
-          <td>2.5</td>
-          <td>?€</td>
-          <td class="small">Manresa en série (80% wr10), Girona en slump (20%). Edge +75% sur cote 2.50. Eric à vérifier cote Winamax/Betclic/Unibet.</td>
-        </tr>
         </tbody>
     </table>
     
@@ -653,21 +645,21 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (3.4h)</td>
+          <td>OK (3.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (3.4h)</td>
+          <td>OK (3.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (3.4h)</td>
+          <td>OK (3.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
@@ -681,7 +673,7 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (2.0h)</td>
+          <td>OK (2.5h)</td>
           <td class="small">2026-05-11T18:06:56.765967</td>
         </tr>
         
@@ -737,7 +729,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (3.4h)</td>
+          <td>OK (3.9h)</td>
           <td class="small">2026-05-11T16:44:08.828393</td>
         </tr>
         </tbody>
