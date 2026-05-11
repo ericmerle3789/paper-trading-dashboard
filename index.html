@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 10/05/2026 22:04 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 11/05/2026 09:04 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>10/05/2026 22:04 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 09:04 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -152,6 +152,10 @@
 <div class="warning">⚠ EUROLEAGUE : [SOFASCORE_ANTIBOT] incremental_update.py euroleague-core a retourne exit=2 : 1/1 jour bloque par anti-bot Sofascore (403). Dataset reste a 2026-05-09 (1j retard). Fallback Chrome MCP non execute car aucun match J+1 a analyser ; impact operationnel nul ce jour-la, mais a relancer demain.</div>
 <div class="warning">⚠ EUROLEAGUE : [PARQUET_METRIC_MISMATCH] Run 09:35 indiquait 'parquet enrichi a 3781 matchs (3337 avec features)' mais master_euroleague.parquet contient toujours 2863 rows (date max 2026-05-09). Soit l'enrichissement a echoue silencieusement, soit la metrique reportee etait incorrecte. A investiguer si la saison reprend (octobre 2026).</div>
 <div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
+<div class="warning">⚠ Task FOOT EQUILIBRE : pas de run depuis 46h</div>
+<div class="warning">⚠ Task FOOT V_CADILLAC : pas de run depuis 46h</div>
+<div class="warning">⚠ Task FOOT DIVERSIFIE : pas de run depuis 46h</div>
+<div class="warning">⚠ Task NBA : pas de run depuis 41h</div>
 <details><summary style="margin-top:16px;">ℹ️ Notes informatives (37 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
@@ -934,23 +938,23 @@
       <thead><tr><th></th><th>Tâche</th><th>État</th><th>Dernier run</th></tr></thead>
       <tbody>
         <tr>
-          <td>🟡</td>
+          <td>🔴</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>Vieillissant (35.1h)</td>
+          <td>PAS DE RUN depuis 46h</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
-          <td>🟡</td>
+          <td>🔴</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>Vieillissant (35.1h)</td>
+          <td>PAS DE RUN depuis 46h</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
         <tr>
-          <td>🟡</td>
+          <td>🔴</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>Vieillissant (35.1h)</td>
+          <td>PAS DE RUN depuis 46h</td>
           <td class="small">2026-05-09T11:00:00</td>
         </tr>
         
@@ -964,14 +968,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (4.0h)</td>
+          <td>OK (15.0h)</td>
           <td class="small">2026-05-10T18:03:28.049623</td>
         </tr>
         
         <tr>
-          <td>🟢</td>
+          <td>🔴</td>
           <td>🏀 NBA</td>
-          <td>OK (29.6h)</td>
+          <td>PAS DE RUN depuis 41h</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -999,7 +1003,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 NHL LAB</td>
-          <td>OK (6.6h)</td>
+          <td>OK (17.6h)</td>
           <td class="small">2026-05-10T15:30:00Z</td>
         </tr>
         
@@ -1195,7 +1199,7 @@
     if (ctxTotal) new Chart(ctxTotal, {
       type: 'line',
       data: {
-        labels: ["10/04", "11/04", "12/04", "13/04", "14/04", "15/04", "16/04", "17/04", "18/04", "19/04", "20/04", "21/04", "22/04", "23/04", "24/04", "25/04", "26/04", "27/04", "28/04", "29/04", "30/04", "01/05", "02/05", "03/05", "04/05", "05/05", "06/05", "07/05", "08/05", "09/05", "10/05"],
+        labels: ["11/04", "12/04", "13/04", "14/04", "15/04", "16/04", "17/04", "18/04", "19/04", "20/04", "21/04", "22/04", "23/04", "24/04", "25/04", "26/04", "27/04", "28/04", "29/04", "30/04", "01/05", "02/05", "03/05", "04/05", "05/05", "06/05", "07/05", "08/05", "09/05", "10/05", "11/05"],
         datasets: [{
           label: 'Capital total (€)',
           data: [9900.0, 9900.0, 9900.0, 9900.0, 9900.01, 9900.01, 9900.01, 9900.01, 9900.01, 9900.01, 9900.02, 9900.02, 9900.02, 9900.02, 9900.02, 9900.02, 9900.03, 9900.03, 9900.03, 9900.03, 9900.03, 9900.03, 9900.04, 9900.04, 9900.04, 9900.04, 9900.04, 9900.05, 9900.05, 9900.05, 9900.05],
