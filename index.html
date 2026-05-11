@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 11/05/2026 19:46 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 11/05/2026 20:09 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 19:46 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>11/05/2026 20:09 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -136,7 +136,7 @@
       <p><b>🟡 Total argent virtuel :</b> 9898.21€ (départ 9900.00€)<br>
          <b>Évolution depuis début :</b> -1.79€ (-0.0181%) — Le système est stable, démarrage en cours</p>
       <p><b>🎯 Paris actifs en attente de résultat :</b> <span style="font-size:1.3em; color:#007aff;"><b>4</b></span></p>
-      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 4 placé(s) ce soir pour demain</p>
+      <p><b>📅 Aujourd'hui :</b> 2 pari(s) résolu(s) (0 gagné / 2 perdus) • 3 placé(s) ce soir pour demain</p>
       <p><b>🏆 Leader actuel :</b> 🧪 FOOT LAB
          (+2.72%)<br>
          <b>📉 En difficulté :</b> 🎾 TENNIS ATP
@@ -148,34 +148,42 @@
 
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
-<div class="warning">⚠ HANDBALL : [SOFASCORE_BLOCKED] Sofascore API bloquee (5/5 jours 403, exit_code=2 du script incremental_update). Dataset master_handball.parquet stoppe a 2025-11-10 sur le min global, mais bootstrap matin du 10/05 (12:48) a recupere 7567 matchs hommes 2024-2026 dont H2H fevrier 2026 — couverture selective par ligue.</div>
-<div class="warning">⚠ Task NBA : pas de run depuis 51h</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (24 entrées) — cliquer pour voir</summary>
+<div class="warning">⚠ NHL HOCKEY : Chrome MCP: Winamax.fr bloque par safety restrictions, Betclic.fr ne charge pas en texte. Pipeline multi-bookmaker FR a investiguer (peut-etre via WebSearch vers comparateurs).</div>
+<div class="warning">⚠ FOOT LAB : Multi-bookmaker scraping FR partiel: Winamax.fr bloque (safety restriction), Betclic.fr+Bwin.fr ne chargent pas en texte. Pour V_CADILLAC_LAB qualified signal (Osasuna-Atletico), SKIP par integrite scientifique (SKILL.md exige >=3 bookmakers FR scrappes).</div>
+<div class="warning">⚠ Task NBA : pas de run depuis 52h</div>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (31 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
-<div class="info-msg">ℹ️ FOOT EQUILIBRE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
-<div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
-<div class="info-msg">ℹ️ FOOT V_CADILLAC : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
-<div class="info-msg">ℹ️ FOOT V_CADILLAC : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
-<div class="info-msg">ℹ️ FOOT DIVERSIFIE : Date_match Le Havre-Marseille: 15:00 (incorrect) vs 21:00 (réel vérifié via Google). Pas de blocage — résolution reportée demain.</div>
-<div class="info-msg">ℹ️ FOOT DIVERSIFIE : J+1 (lundi 11/05) faible volume : seules Premier League (Tottenham-Leeds) et Serie A (Napoli-Bologna) ont match dans les 4 ligues V_CADILLAC. Bundesliga + Ligue 1 vides.</div>
+<div class="info-msg">ℹ️ FOOT EQUILIBRE : J+1 (mardi 12/05) : aucun match dans les 4 ligues V_CADILLAC (E0/I1/D1/F1). Premier League suivant 13/05 (Man City-Crystal Palace), Serie A suivant 17/05, Bundesliga suivant 16/05, Ligue 1 suivant 13/05 (Brest-Strasbourg, Lens-PSG).</div>
+<div class="info-msg">ℹ️ FOOT EQUILIBRE : Note: 3 matchs LaLiga existent le 12/05 (Celta-Levante, Betis-Elche, Osasuna-Atletico Madrid) mais LaLiga hors scope V_CADILLAC (4 ligues officielles E0/I1/D1/F1).</div>
+<div class="info-msg">ℹ️ FOOT EQUILIBRE : Note: Red Star-Rodez 12/05 = Ligue 2 Relegation Play-offs (pas Ligue 1) — hors scope.</div>
+<div class="info-msg">ℹ️ FOOT EQUILIBRE : Daily-task foot-paper-trading-daily 18:30 n'a pas tourne aujourd'hui : daily_run.json precedent du 10/05 18:30. evening-scan-multi assure le scan J+1.</div>
+<div class="info-msg">ℹ️ FOOT V_CADILLAC : J+1 (mardi 12/05) : aucun match dans les 4 ligues V_CADILLAC (E0/I1/D1/F1). Premier League suivant 13/05 (Man City-Crystal Palace), Serie A suivant 17/05, Bundesliga suivant 16/05, Ligue 1 suivant 13/05 (Brest-Strasbourg, Lens-PSG).</div>
+<div class="info-msg">ℹ️ FOOT V_CADILLAC : Note: 3 matchs LaLiga existent le 12/05 (Celta-Levante, Betis-Elche, Osasuna-Atletico Madrid) mais LaLiga hors scope V_CADILLAC (4 ligues officielles E0/I1/D1/F1).</div>
+<div class="info-msg">ℹ️ FOOT V_CADILLAC : Note: Red Star-Rodez 12/05 = Ligue 2 Relegation Play-offs (pas Ligue 1) — hors scope.</div>
+<div class="info-msg">ℹ️ FOOT V_CADILLAC : Daily-task foot-paper-trading-daily 18:30 n'a pas tourne aujourd'hui : daily_run.json precedent du 10/05 18:30. evening-scan-multi assure le scan J+1.</div>
+<div class="info-msg">ℹ️ FOOT DIVERSIFIE : J+1 (mardi 12/05) : aucun match dans les 4 ligues V_CADILLAC (E0/I1/D1/F1). Premier League suivant 13/05 (Man City-Crystal Palace), Serie A suivant 17/05, Bundesliga suivant 16/05, Ligue 1 suivant 13/05 (Brest-Strasbourg, Lens-PSG).</div>
+<div class="info-msg">ℹ️ FOOT DIVERSIFIE : Note: 3 matchs LaLiga existent le 12/05 (Celta-Levante, Betis-Elche, Osasuna-Atletico Madrid) mais LaLiga hors scope V_CADILLAC (4 ligues officielles E0/I1/D1/F1).</div>
+<div class="info-msg">ℹ️ FOOT DIVERSIFIE : Note: Red Star-Rodez 12/05 = Ligue 2 Relegation Play-offs (pas Ligue 1) — hors scope.</div>
+<div class="info-msg">ℹ️ FOOT DIVERSIFIE : Daily-task foot-paper-trading-daily 18:30 n'a pas tourne aujourd'hui : daily_run.json precedent du 10/05 18:30. evening-scan-multi assure le scan J+1.</div>
+<div class="info-msg">ℹ️ NHL HOCKEY : Dataset NHL ne contient pas les playoffs (dernier match 16 avril 2026). Pour scan playoffs, considerer incremental update playoff-aware ou marquer playoff matches comme out-of-distribution.</div>
 <div class="info-msg">ℹ️ EUROLEAGUE : {'info': 'EuroLeague saison terminée (Final Four passé). API officielle: 0 match J+1. Sofascore: uniquement matchs Cyber/eSports filtrés.'}</div>
-<div class="info-msg">ℹ️ VOLLEY : CRITIQUE - Dataset master_volley.parquet gele au 2025-04-30 (gap 375 jours = saison 2025-26 entiere manquee). Sofascore API renvoie 403 sur 5/5 jours testes (anti-bot quota). incremental_update.py exit_code=2.</div>
-<div class="info-msg">ℹ️ VOLLEY : Aucun pari place aujourd'hui par integrite scientifique : les features rolling V_FORM (home_wr_10, away_wr_10) seraient calculees sur historique perime (rosters 2024-25 vs matchs 2026-05).</div>
-<div class="info-msg">ℹ️ VOLLEY : Action requise hors task quotidienne : re-bootstrapper le dataset volley via Chrome MCP intensif sur Flashscore (https://www.flashscore.com/volleyball/) OU source alternative, jusqu'a couvrir au minimum les 60 derniers jours par equipe active.</div>
-<div class="info-msg">ℹ️ VOLLEY : NB : run du 2026-05-09 deja blocke (end-of-season + 403). 2 runs consecutifs sans paris.</div>
-<div class="info-msg">ℹ️ HANDBALL : [EVENING_RUN_CONFIRMED] Run scheduled J-1 19h50 confirme l'analyse matinale (09:52). Verification Chrome MCP via Flashscore le 10/05 a 19:52 — pas de nouveaux candidats J+1 detectes. 0 pari place, conforme aux skips legitimes du matin.</div>
-<div class="info-msg">ℹ️ HANDBALL : [DATASET_BOOTSTRAPPED_VALIDATION] Pattern V_FORM 7v7 in-sample : WR 83.4% sur 874 paris (ROI +66.82%) sur dataset bootstrappe 7567 matchs. Validation in-sample uniquement — out-of-sample (paper trading reel) commence ce mois-ci.</div>
-<div class="info-msg">ℹ️ HANDBALL : 1 seul match candidat hommes dans ligues couvertes pour J+1 (Pologne Superliga Losers stage)</div>
-<div class="info-msg">ℹ️ HANDBALL : Le match candidat ne passe pas le filtre V_FORM: les deux equipes sont en slump</div>
-<div class="info-msg">ℹ️ NHL LAB : Intersaison confirmee J+1 : KHL/SHL/Liiga/DEL/NL finissent en mars-avril, CHL en fevrier. Reprise prevue septembre 2026.</div>
-<div class="info-msg">ℹ️ NHL LAB : Sofascore API 403 anti-bot (desktop + mobile UA testes). Skip fallback Chrome MCP car (a) intersaison structurelle deja documentee, (b) Core NHL run de 17h00 confirme NHL playoffs actifs mais aucune ligue europeenne disponible.</div>
-<div class="info-msg">ℹ️ NHL LAB : Aucun match dans les 6 ligues Lab couvertes le 2026-05-11. master_lab.json toujours vide (0 paris depuis creation 2026-05-09, soit 2 jours d'intersaison consecutifs).</div>
-<div class="info-msg">ℹ️ NHL LAB : Lab en hibernation mecanique jusqu'a septembre 2026. Prochaine fenetre de collecte : reprise CHL fin aout 2026, puis KHL/SHL/Liiga/DEL/NL courant septembre 2026.</div>
+<div class="info-msg">ℹ️ VOLLEY : Sofascore API retourne 0 evenements volley pour 2026-05-12 : saisons europeennes terminees (Pologne fin mars, Italie SuperLega fin avril, France Ligue A fin avril). VNL 2026 demarre debut juin.</div>
+<div class="info-msg">ℹ️ VOLLEY : Dataset master_volley.parquet update partiel : +167 matchs (cap 30j sur gap 376j). Encore 346j a rattraper sur prochains runs. Features rolling sur dataset partiel non utilisees ce soir car 0 candidats.</div>
+<div class="info-msg">ℹ️ VOLLEY : 0 bookmaker scrape (0 candidats), pas de news_check/correlation_check requis.</div>
+<div class="info-msg">ℹ️ VOLLEY : 3 runs consecutifs sans paris (09/05 + 10/05 + 11/05). Reprise prevue VNL 2026 (debut juin).</div>
+<div class="info-msg">ℹ️ HANDBALL : Sofascore API retourne 0 evenements handball homme dans ligues FR-compatibles (Starligue/HBL/EHF Champions/etc.) pour 2026-05-12.</div>
+<div class="info-msg">ℹ️ HANDBALL : Saisons europeennes en phase finale ou terminees : Starligue fin mai (playoffs imminents), HBL fin mai, EHF Champions League finale prevue debut juin.</div>
+<div class="info-msg">ℹ️ HANDBALL : Pas de candidats J+1 - 0 bookmaker scrape, pas de news_check requis.</div>
+<div class="info-msg">ℹ️ HANDBALL : Daily-task handball-paper-trading-daily 19h50 n'a pas tourne aujourd'hui (timestamp 10/05 dans daily_run precedent). evening-scan-multi assure le scan J+1.</div>
+<div class="info-msg">ℹ️ NHL LAB : Re-scan a 20h00 par evening-scan-multi : confirme intersaison J+1 (Sofascore retourne 0 evenements ice-hockey toutes ligues 2026-05-12).</div>
+<div class="info-msg">ℹ️ NHL LAB : KHL/SHL/Liiga/DEL/NL finissent en mars-avril, CHL en fevrier. Reprise prevue septembre 2026.</div>
+<div class="info-msg">ℹ️ NHL LAB : Lab en hibernation mecanique jusqu'a septembre 2026. master_lab.json reste vide (0/50 paris pour validation extension format 6v6).</div>
 <div class="info-msg">ℹ️ NBA LAB : {'info': 'NCAA/G League hors saison (mai = été WNBA seulement)'}</div>
 <div class="info-msg">ℹ️ EUROLEAGUE LAB : Scraping multi-bookmaker FR non exécuté en mode auto — cote Sofascore=2.50 indicative. Eric à valider cote FR avant placement.</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': '1 pari V_CADILLAC_LAB place: Alverca vs Estoril Praia (P1) DRAW+UNDER 2.5 @ 7.80 Betclic', 'action': 'Suivre kickoff 21:30. Verification cotes triple (Betclic 7.80 / Unibet 6.90 / Bwin 6.045).'}</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Cote DRAW Bwin (3.10) sensiblement plus basse que Betclic (3.63) et Unibet (3.45). Margin Bwin probablement plus elevee. Best book = Betclic.', 'action': 'Continuer scraping multi-bookmaker pour identifier patterns de divergence.'}</div>
-<div class="info-msg">ℹ️ FOOT LAB : {'level': 'INFO', 'msg': 'Kickoff fixtures.csv (20:30) divergent du kickoff Betclic/Unibet/Bwin (21:30). Heure FR canonique = 21:30 Liga Sagres.', 'action': 'Resolution differee au run du 11/05 19:00.'}</div>
+<div class="info-msg">ℹ️ FOOT LAB : Sofascore API 403 anti-bot (desktop + mobile UA testes). Continentales (Sudamericana/Libertadores/AFC/CAF) NON analysees via API.</div>
+<div class="info-msg">ℹ️ FOOT LAB : 0 matchs Eredivisie/Liga Portugal/Bundesliga 2 J+1 (intersaison ou play-offs).</div>
+<div class="info-msg">ℹ️ FOOT LAB : Daily-task foot-lab-paper-trading-daily 19h00 n'a pas tourne aujourd'hui. evening-scan-multi assure le scan J+1.</div>
+<div class="info-msg">ℹ️ FOOT LAB : Resolu hier (10/05): Alverca vs Estoril Praia, DRAW+UNDER 2.5 WON cote 7.80 (+9.36 EUR Thompson) confirme par master_lab.json statuses.</div>
 </details>
 
 <h2>📈 Évolution du capital total (30 derniers jours)</h2>
@@ -596,14 +604,6 @@
           <td>?€</td>
           <td class="small">Manresa en série (80% wr10), Girona en slump (20%). Edge +75% sur cote 2.50. Eric à vérifier cote Winamax/Betclic/Unibet.</td>
         </tr>
-        
-        <tr>
-          <td>🧪 FOOT LAB</td>
-          <td>Alverca vs Estoril Praia</td>
-          <td>7.8</td>
-          <td>1.2€</td>
-          <td class="small">Marché très équilibré : Alverca (cote 2.35) vs Estoril (2.70) ≈ pas de favori (Δp=0.055). Cote du nul élevée (3.50+) typique d'un match incertain où la signature DRAW + UNDER 2.5 est statistiquement favorable. Test extension de V_CADILLAC à la Liga Portugal.</td>
-        </tr>
         </tbody>
     </table>
     
@@ -653,21 +653,21 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.4h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
@@ -681,14 +681,14 @@
         <tr>
           <td>🟢</td>
           <td>🎾 TENNIS ATP</td>
-          <td>OK (1.7h)</td>
+          <td>OK (2.0h)</td>
           <td class="small">2026-05-11T18:06:56.765967</td>
         </tr>
         
         <tr>
           <td>🔴</td>
           <td>🏀 NBA</td>
-          <td>PAS DE RUN depuis 51h</td>
+          <td>PAS DE RUN depuis 52h</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -737,7 +737,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (3.0h)</td>
+          <td>OK (3.4h)</td>
           <td class="small">2026-05-11T16:44:08.828393</td>
         </tr>
         </tbody>
