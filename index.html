@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>📊 Paper Trading Dashboard — 12/05/2026 17:13 (heure FR)</title>
+<title>📊 Paper Trading Dashboard — 12/05/2026 20:38 (heure FR)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   * { box-sizing: border-box; }
@@ -127,7 +127,7 @@
 <body>
 
 <h1>📊 Paper Trading Dashboard</h1>
-<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>12/05/2026 17:13 (heure FR)</b></p>
+<p class="small">Mis à jour automatiquement — Dernière mise à jour : <b>12/05/2026 20:38 (heure FR)</b></p>
 <p class="small">Sources : 13 portefeuilles virtuels (10 Core + 4 Lab) • Versionné par Git pour traçabilité scientifique</p>
 
 
@@ -148,8 +148,8 @@
 
 <h2>⚠ Avertissements (à surveiller)</h2>
 <p class="small">Problèmes mineurs ou contournés automatiquement par le système.</p>
-<div class="warning">⚠ Task NBA : pas de run depuis 73h</div>
-<details><summary style="margin-top:16px;">ℹ️ Notes informatives (25 entrées) — cliquer pour voir</summary>
+<div class="warning">⚠ Task NBA : pas de run depuis 76h</div>
+<details><summary style="margin-top:16px;">ℹ️ Notes informatives (27 entrées) — cliquer pour voir</summary>
 <p class="small">Ce sont des <b>messages d'information</b> du système, pas des erreurs. Exemples : "saison morte normale", "fallback réussi", "calendrier vide".</p>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : 0 candidat universal signal sur 3 matchs J+1 analyses. Saison 2025-26 fin de cycle (top 4 EU termine fin mai).</div>
 <div class="info-msg">ℹ️ FOOT EQUILIBRE : Proxy xG fige fin 2024-25 (limitation honnete documentee dans SKILL).</div>
@@ -161,6 +161,9 @@
 <div class="info-msg">ℹ️ NHL HOCKEY : Pipeline scraping multi-bookmaker FR a investiguer (Winamax/Betclic non scrappable via Chrome MCP).</div>
 <div class="info-msg">ℹ️ TENNIS ATP : Bet Zverev/Darderi non resolu (match long sur clay, encore en cours a 17h). Sera resolu au prochain run.</div>
 <div class="info-msg">ℹ️ TENNIS ATP : Scan J+1 QF Rome differe : bracket non determine. Eric verra QF programme demain matin.</div>
+<div class="info-msg">ℹ️ EUROLEAGUE : 🚨 BUG CRITIQUE: master_euroleague.parquet contient des doublons + flags home_won/away_won=None depuis 2026-04-16</div>
+<div class="info-msg">ℹ️ EUROLEAGUE : À investiguer: scripts/incremental_update.py euroleague-core probablement défectueux</div>
+<div class="info-msg">ℹ️ EUROLEAGUE : Tous les paris EuroLeague Core suspendus jusqu'à correction</div>
 <div class="info-msg">ℹ️ VOLLEY : Intersaison volley europeen confirmee. Pologne/Italie SuperLega/France Ligue A terminees avril. VNL 2026 demarre debut juin.</div>
 <div class="info-msg">ℹ️ VOLLEY : Dataset master_volley.parquet update partiel : +74 matchs (cap 30j sur gap 358j). 328j restants. Features rolling obsoletes - mais 0 candidats donc non utilisees.</div>
 <div class="info-msg">ℹ️ VOLLEY : 4 runs consecutifs sans paris (09/05 + 10/05 + 11/05 + 12/05). Reprise prevue VNL debut juin 2026.</div>
@@ -170,9 +173,8 @@
 <div class="info-msg">ℹ️ HANDBALL : Pas de candidats J+1 - 0 bookmaker scrape requis.</div>
 <div class="info-msg">ℹ️ NHL LAB : Intersaison hockey europeen confirmee (KHL/SHL/Liiga/DEL/NL fin mars-avril, CHL fin fevrier). Reprise prevue septembre 2026.</div>
 <div class="info-msg">ℹ️ NHL LAB : Lab en hibernation mecanique jusqu'a septembre 2026. master_lab.json reste vide (0/50 paris pour validation extension format 6v6).</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : Lega A Italy: page vide oddsportal</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : LNB France: pas de match J+1 (prochain 16 mai)</div>
-<div class="info-msg">ℹ️ EUROLEAGUE LAB : EuroCup non-scanné: probable hors saison</div>
+<div class="info-msg">ℹ️ NBA LAB : WNBA saison 2026 démarre — 3 expansion teams (Portland Fire, Toronto Tempo, Golden State Valkyries) en warmup</div>
+<div class="info-msg">ℹ️ EUROLEAGUE LAB : Match Girona vs Manresa du 12/05 toujours PENDING (inprogress 36-26 mi-temps)</div>
 <div class="info-msg">ℹ️ FOOT LAB : 1 signal qualified (Espanyol-Athletic) SKIP par Chrome MCP scraping FR indisponible. Pipeline a debuguer (decision Eric).</div>
 <div class="info-msg">ℹ️ FOOT LAB : 0 matchs Eredivisie/Liga Portugal/Bundesliga 2 J+1 (fin saison ou play-offs).</div>
 <div class="info-msg">ℹ️ FOOT LAB : Sofascore API 403 anti-bot toujours present. Continentales non analysees ce jour.</div>
@@ -550,21 +552,21 @@
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT EQUILIBRE</td>
-          <td>OK (24.5h)</td>
+          <td>OK (27.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT V_CADILLAC</td>
-          <td>OK (24.5h)</td>
+          <td>OK (27.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
         <tr>
           <td>🟢</td>
           <td>⚽ FOOT DIVERSIFIE</td>
-          <td>OK (24.5h)</td>
+          <td>OK (27.9h)</td>
           <td class="small">2026-05-11T16:45:39.701309</td>
         </tr>
         
@@ -585,7 +587,7 @@
         <tr>
           <td>🔴</td>
           <td>🏀 NBA</td>
-          <td>PAS DE RUN depuis 73h</td>
+          <td>PAS DE RUN depuis 76h</td>
           <td class="small">2026-05-09T16:30:00</td>
         </tr>
         
@@ -634,7 +636,7 @@
         <tr>
           <td>🟢</td>
           <td>🧪 FOOT LAB</td>
-          <td>OK (24.5h)</td>
+          <td>OK (27.9h)</td>
           <td class="small">2026-05-11T16:44:08.828393</td>
         </tr>
         </tbody>
